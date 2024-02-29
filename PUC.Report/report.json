@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter54931bc24c899b325d9a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ProcessUnitCost\"}},\"Property\":\"costingObject\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcessUnitCost\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"costingObject\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Penfill'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}},{\"name\":\"Filter267aefade455385f0a3c\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ProcessUnitCost\"}},\"Property\":\"version\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcessUnitCost\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"version\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'REA'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"461a9a043f1d4c7e3be8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":21.659951651893635,\"y\":213.50523771152297,\"z\":1000,\"width\":1241.8372280419017,\"height\":146.4625302175665}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ProcessUnitCost.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ProcessUnitCost.volume)\"}],\"Series\":[{\"queryRef\":\"ProcessUnitCost.costType\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcessUnitCost\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Date\"},\"Name\":\"ProcessUnitCost.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"volume\"}},\"Function\":0},\"Name\":\"Sum(ProcessUnitCost.volume)\",\"NativeReferenceName\":\"Sum of volume\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"costType\"},\"Name\":\"ProcessUnitCost.costType\",\"NativeReferenceName\":\"costType\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 146.46,
+          "width": 1241.84,
+          "x": 21.66,
+          "y": 213.51,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cfe7112658471248404d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":21.659951651893635,\"y\":31.974214343271555,\"z\":0,\"width\":1233.5858178887995,\"height\":181.53102336825143}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ProcessUnitCost.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ProcessUnitCost.costBase)\"}],\"Series\":[{\"queryRef\":\"ProcessUnitCost.costType\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcessUnitCost\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Date\"},\"Name\":\"ProcessUnitCost.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"costBase\"}},\"Function\":0},\"Name\":\"Sum(ProcessUnitCost.costBase)\",\"NativeReferenceName\":\"Sum of costBase\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"costType\"},\"Name\":\"ProcessUnitCost.costType\",\"NativeReferenceName\":\"costType\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 181.53,
+          "width": 1233.59,
+          "x": 21.66,
+          "y": 31.97,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e0957f9c4061ba7d4640\",\"layouts\":[{\"id\":0,\"position\":{\"x\":21.659951651893635,\"y\":370.28203062046737,\"z\":2000,\"width\":1258.3400483481064,\"height\":349.65350523771156}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"CostCenter.lvl2Desc\",\"active\":true},{\"queryRef\":\"CostCenter.lvl3Desc\",\"active\":true},{\"queryRef\":\"CostCenter.lvl4Desc\",\"active\":true},{\"queryRef\":\"CostCenter.costCenter\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(ProcessUnitCost.costBase)\"},{\"queryRef\":\"Sum(ProcessUnitCost.volume)\"}],\"Columns\":[{\"queryRef\":\"ProcessUnitCost.year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ProcessUnitCost\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"CostCenter\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"costBase\"}},\"Function\":0},\"Name\":\"Sum(ProcessUnitCost.costBase)\",\"NativeReferenceName\":\"Sum of costBase\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl2Desc\"},\"Name\":\"CostCenter.lvl2Desc\",\"NativeReferenceName\":\"lvl2Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl3Desc\"},\"Name\":\"CostCenter.lvl3Desc\",\"NativeReferenceName\":\"lvl3Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl4Desc\"},\"Name\":\"CostCenter.lvl4Desc\",\"NativeReferenceName\":\"lvl4Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"costCenter\"},\"Name\":\"CostCenter.costCenter\",\"NativeReferenceName\":\"costCenter\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"volume\"}},\"Function\":0},\"Name\":\"Sum(ProcessUnitCost.volume)\",\"NativeReferenceName\":\"Sum of volume\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"year\"},\"Name\":\"ProcessUnitCost.year\",\"NativeReferenceName\":\"year\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl2Desc\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl3Desc\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl4Desc\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"costCenter\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"CostCenter.lvl2Desc\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CostCenter\"}},\"Property\":\"lvl2Desc\"}}],\"isPinned\":true},{\"queryRefs\":[\"CostCenter.lvl3Desc\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CostCenter\"}},\"Property\":\"lvl3Desc\"}}],\"isPinned\":true},{\"queryRefs\":[\"CostCenter.lvl4Desc\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CostCenter\"}},\"Property\":\"lvl4Desc\"}}],\"isPinned\":true},{\"queryRefs\":[\"CostCenter.costCenter\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Product Supply'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'PS CSDS'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'PS Injectable Finished Products'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'IFP Bagsv�rd'\"}}],\"isToggled\":true}]}]}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 349.65,
+          "width": 1258.34,
+          "x": 21.66,
+          "y": 370.28,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

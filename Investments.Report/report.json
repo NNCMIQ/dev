@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Inestment REA",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"389f1f9707cad8cdf81c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":690.4187366926898,\"y\":258.9070262597587,\"z\":2000,\"width\":589.5812633073101,\"height\":461.4904187366927,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"InvestmentSpendFACT.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(InvestmentSpendFACT.Amount)\"}],\"Series\":[{\"queryRef\":\"CostCenter.lvl3Desc\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"InvestmentSpendFACT\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"CostCenter\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Date\"},\"Name\":\"InvestmentSpendFACT.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Amount\"}},\"Function\":0},\"Name\":\"Sum(InvestmentSpendFACT.Amount)\",\"NativeReferenceName\":\"Sum of Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl3Desc\"},\"Name\":\"CostCenter.lvl3Desc\",\"NativeReferenceName\":\"lvl3Desc\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 461.49,
+          "width": 589.58,
+          "x": 690.42,
+          "y": 258.91,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"8399f773a6a0f507a044\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.626685592618879,\"y\":258.9070262597587,\"z\":1000,\"width\":676.7920511000709,\"height\":395.1738821859475,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ClarityProjects.projectName\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(InvestmentSpendFACT.Amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"InvestmentSpendFACT\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"ClarityProjects\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"projectName\"},\"Name\":\"ClarityProjects.projectName\",\"NativeReferenceName\":\"projectName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Amount\"}},\"Function\":0},\"Name\":\"Sum(InvestmentSpendFACT.Amount)\",\"NativeReferenceName\":\"Sum of Amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 395.17,
+          "width": 676.79,
+          "x": 13.63,
+          "y": 258.91,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fee21a718cbc7a863ee4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.917525773195877,\"y\":0,\"z\":0,\"width\":1265.5670103092784,\"height\":237.5257731958763,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(InvestmentSpendFACT.Amount)\"}],\"Columns\":[{\"queryRef\":\"InvestmentSpendFACT.Date\",\"active\":true}],\"Rows\":[{\"queryRef\":\"CostCenter.lvl1Desc\",\"active\":true},{\"queryRef\":\"CostCenter.lvl2Desc\",\"active\":true},{\"queryRef\":\"CostCenter.lvl3Desc\",\"active\":true},{\"queryRef\":\"CostCenter.lvl4Desc\"},{\"queryRef\":\"CostCenter.lvl5Desc\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"InvestmentSpendFACT\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"CostCenter\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Amount\"}},\"Function\":0},\"Name\":\"Sum(InvestmentSpendFACT.Amount)\",\"NativeReferenceName\":\"Sum of Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Date\"},\"Name\":\"InvestmentSpendFACT.Date\",\"NativeReferenceName\":\"Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl1Desc\"},\"Name\":\"CostCenter.lvl1Desc\",\"NativeReferenceName\":\"lvl1Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl2Desc\"},\"Name\":\"CostCenter.lvl2Desc\",\"NativeReferenceName\":\"lvl2Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl3Desc\"},\"Name\":\"CostCenter.lvl3Desc\",\"NativeReferenceName\":\"lvl3Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl4Desc\"},\"Name\":\"CostCenter.lvl4Desc\",\"NativeReferenceName\":\"lvl4Desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lvl5Desc\"},\"Name\":\"CostCenter.lvl5Desc\",\"NativeReferenceName\":\"lvl5Desc\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"CostCenter.lvl1Desc\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CostCenter\"}},\"Property\":\"lvl1Desc\"}}],\"isPinned\":true},{\"queryRefs\":[\"CostCenter.lvl2Desc\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CostCenter\"}},\"Property\":\"lvl2Desc\"}}],\"isPinned\":true},{\"queryRefs\":[\"CostCenter.lvl3Desc\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"CostCenter.lvl4Desc\"],\"isCollapsed\":true},{\"queryRefs\":[\"CostCenter.lvl5Desc\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'PS, Quality and IT'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Product Supply'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 237.53,
+          "width": 1265.57,
+          "x": 13.92,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
