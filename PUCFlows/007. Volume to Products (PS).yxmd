@@ -1,0 +1,3485 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="306">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="55" y="55" width="876" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Volume to Products</Text>
+          <Font name="Arial" size="15.75" style="1" />
+          <TextColor name="White" />
+          <FillColor r="128" g="128" b="255" />
+          <Shape shape="0" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="307">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="55" y="127" width="864" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Description: Maps Volumes to Costing Objects and Brands
+
+Steps:
+
+1. Adds Costing Object Based on PPN &amp; PRB
+2. Assign Product Weight
+3. Filter out Oral Sema from 1940 &amp; Other from 1928
+4. Adding Brand mapping
+5. Output to ADA FI_PUC_3_VOLUMES &amp; yxmdb for following flows</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="319">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4013" y="593" width="330" height="206" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>MANUAL FIX_1974 ORAL SEMA BULK</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="318">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="4134" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;1976&quot;" field="Hierarchy Area" size="100" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Hierarchy Area = "1976"
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="317">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="4038" y="654" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression><![CDATA[[Plant]="2026" AND [Hierarchy Area]="1974"
+]]></Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[[Plant]="2026" AND [Hierarchy Area]="1974"
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="320">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="4146" y="726" width="172" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>05/03/2024 Error in volumes, Oral sema Bulk placed on 1974</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="321">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="4230" y="654" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="311">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="66" y="918" width="147" height="149" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>PRB Codes</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="91" y="967" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.InputDataPath%\PRB Codes.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>PRB Codes.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PRB" size="10" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`PRB codes$`" type="V_String" />
+                <Field name="Description" size="50" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`PRB codes$`" type="V_String" />
+                <Field name="Costing Object" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`PRB codes$`" type="V_String" />
+                <Field name="Group PRB" size="50" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`PRB codes$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="312">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="66" y="1374" width="168" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Product Weight</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="91" y="1423" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.InputDataPath%\Product_weights.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Product_weights.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Old Costing object" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_weights_master.xlsx|||`Weights$`" type="V_String" />
+                <Field name="Product weight" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_weights_master.xlsx|||`Weights$`" type="Double" />
+                <Field name="Costing Object" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_weights_master.xlsx|||`Weights$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="313">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2490" y="834" width="302" height="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>&gt; HRT Bulk &amp; Dispenser (2023 Review)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="173">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2539" y="943" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if IsNull([Volume]) then 0&#xA;&#xA;ELSEIF [Costing Object]=&quot;HRT bulk&quot; THEN [Volume]/0.00008 &#xA;&#xA;ELSEIF [Costing Object]=&quot;HRT dispenser&quot; and DateTimeYear([Date])=2022 And [Version] IN (&quot;LE&quot;, &quot;RE2&quot;) THEN [Volume]*28&#xA;&#xA;ELSE [Volume] &#xA;&#xA;ENDIF&#xA;" field="Volume" size="8" type="Double" />
+                <FormulaField expression="if IsNull([Description]) or [Description]=&quot;N/A&quot; or isempty([Description])  &#xA;then &quot;None&quot; &#xA;else [Description] &#xA;endif" field="Description" size="50" type="V_WString" />
+                <FormulaField expression="if IsNull([Group PRB]) or [Group PRB]=&quot;N/A&quot; or isempty([Group PRB]) &#xA;then &quot;None&quot; &#xA;else [Group PRB]  &#xA;endif" field="Group PRB" size="50" type="V_String" />
+                <FormulaField expression="if IsNull([PRB]) or [PRB]=&quot;N/A&quot; or isempty([PRB])&#xA;then &quot;None&quot; &#xA;else [PRB] &#xA;endif" field="PRB" size="10" type="V_WString" />
+                <FormulaField expression="if IsNull([Group PPN]) or [Group PPN]=&quot;N/A&quot; or isempty([Group PPN]) &#xA;then &quot;None&quot; &#xA;else [Group PPN] &#xA;endif" field="Group PPN" size="50" type="V_String" />
+                <FormulaField expression="if IsNull([ECC_Prod_Hier]) or [ECC_Prod_Hier]=&quot;N/A&quot; or isempty([ECC_Prod_Hier]) &#xA;then &quot;None&quot; &#xA;else [ECC_Prod_Hier] &#xA;endif" field="ECC_Prod_Hier" size="30" type="V_String" />
+                <FormulaField expression="if IsNull([PPN]) or [PPN]=&quot;N/A&quot; or isempty([PPN]) &#xA;then &quot;None&quot; &#xA;else [PPN] endif" field="PPN" size="10" type="V_WString" />
+                <FormulaField expression="if IsNull([Plant]) or [Plant]=&quot;N/A&quot; or isempty([Plant]) then &quot;None&quot; &#xA;else [Plant] &#xA;endif" field="Plant" size="60" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>&gt; HRT Bulk &amp; Dispenser
+&gt; replacing Null with "None" for many variables</AnnotationText>
+              <DefaultAnnotationText>Volume = if IsNull([Volume]) then 0
+
+ELSEIF [Costing Object]="HRT bulk" THEN [Vo...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="207">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="2515" y="883" width="252" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>HRT LE &amp; RE2 2022 formula
+can be changed next year</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="310">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="604" y="473" width="1149" height="1118" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Costing Object mapping</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1639" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>all data with Costing Object</AnnotationText>
+              <DefaultAnnotationText>all data with Costing Object</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="162">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="629" y="522" width="531" height="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Assign costing object to 7 and 5 items based on PPN in BW</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="29">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1026" y="571" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="IF [Material Type]=&quot;Packed&quot; THEN [Costing object packed]&#xA;&#xA;ELSEIF [Material Type]=&quot;Assembly&quot; THEN [Costing object assembly]&#xA;&#xA;ELSEIF [Material Type]=&quot;Semi-finished&quot; THEN [Costing object semi-finished]&#xA;&#xA;ELSE &quot;N/A&quot;&#xA;&#xA;ENDIF " field="Costing Object" size="30" type="V_String" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Costing Object</AnnotationText>
+                  <DefaultAnnotationText>Costing Object = IF [Material Type]="Packed" THEN [Costing object packed]
+
+ELSEI...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="138">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+                <Position x="894" y="571" />
+              </GuiSettings>
+              <Properties>
+                <Configuration joinByRecordPos="False">
+                  <JoinInfo connection="Left">
+                    <Field field="PPN" />
+                  </JoinInfo>
+                  <JoinInfo connection="Right">
+                    <Field field="PPN" />
+                  </JoinInfo>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Join">
+                      <OrderChanged value="True" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Right_Costing object assembly" selected="True" input="Right_" />
+                        <SelectField field="Right_Costing object packed" selected="True" input="Right_" />
+                        <SelectField field="Right_Costing object semi-finished" selected="True" input="Right_" />
+                        <SelectField field="Left_Date" selected="True" input="Left_" />
+                        <SelectField field="Right_Description" selected="True" input="Right_" />
+                        <SelectField field="Left_ECC_Prod_Hier" selected="True" input="Left_" />
+                        <SelectField field="Right_Group PPN" selected="True" input="Right_" />
+                        <SelectField field="Right_Group PRB" selected="True" input="Right_" />
+                        <SelectField field="Left_Hierarchy Area" selected="True" input="Left_" />
+                        <SelectField field="Left_Material" selected="True" input="Left_" />
+                        <SelectField field="Left_Material Type" selected="True" input="Left_" />
+                        <SelectField field="Left_Plant" selected="True" input="Left_" />
+                        <SelectField field="Left_PPN" selected="True" input="Left_" />
+                        <SelectField field="Right_PPN" selected="False" rename="Right_PPN" input="Right_" />
+                        <SelectField field="Left_PRB" selected="True" input="Left_" />
+                        <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                        <SelectField field="Left_Unit of measure" selected="True" input="Left_" />
+                        <SelectField field="Left_Version" selected="True" input="Left_" />
+                        <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                        <SelectField field="Left_Volume" selected="True" input="Left_" />
+                        <SelectField field="Left_Volume Type" selected="True" input="Left_" />
+                        <SelectField field="Left_Year" selected="True" input="Left_" />
+                        <SelectField field="Left_Volume Agreement Group" selected="False" input="Left_" />
+                        <SelectField field="*Unknown" selected="False" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Identify whether costing object is packed/assembly or filled
+Use Product Description</AnnotationText>
+                  <DefaultAnnotationText>Identify whether costing object is packed/assembly or filled
+Use Product Description</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+            </Node>
+            <Node ToolID="163">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="1015" y="667" width="120" height="48" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text>in flow 2 we use it to identify Material Type Assembly</Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+            <Node ToolID="33">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="654" y="571" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>Left([Material], 1) = "7" OR Left([Material], 1) = "5"</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Materials starting with "7" &amp; "5"</AnnotationText>
+                  <DefaultAnnotationText>Left([Material], 1) = "7" OR Left([Material], 1) = "5"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="217">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="654" y="691" width="100" height="40" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text>are not necessary in manual mapping
+PRB
+PRB Group 
+Description 
+
+we need PPN &amp; Costing Object</Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="169">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="629" y="773" width="606" height="223" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Assign costing object to 2 (Motor Modules) and 4 (Tablets) items based on PRB in BW</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="34">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+                <Position x="918" y="835" />
+              </GuiSettings>
+              <Properties>
+                <Configuration joinByRecordPos="False">
+                  <JoinInfo connection="Left">
+                    <Field field="PRB" />
+                  </JoinInfo>
+                  <JoinInfo connection="Right">
+                    <Field field="PRB" />
+                  </JoinInfo>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Join">
+                      <OrderChanged value="False" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Right_PRB" selected="False" rename="Right_PRB" />
+                        <SelectField field="*Unknown" selected="True" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Assign Costing Object
+Add PRB group 
+Add Description</AnnotationText>
+                  <DefaultAnnotationText>Enrich volume data with product descriptions</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+            </Node>
+            <Node ToolID="43">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="654" y="822" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression><![CDATA[//Motor modules
+ (Left([Material], 1) = "2" AND ([ECC_Prod_Hier]="0111A731305" OR [ECC_Prod_Hier]="0118A731305")) 
+
+OR 
+ //Tablets
+ Left([Material], 1) = "4" AND Left([Hierarchy Area], 3) != '194'
+/*IFP 4 items used as FORMULATION items, OUT OF PUC SCOPE*/
+ //Not in the scope of PUC
+and Left([Material], 3) != "440"
+ ]]></Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Materials starting with 2 (only Motor Modules) &amp; 4</AnnotationText>
+                  <DefaultAnnotationText>//Motor modules
+ (Left([Material], 1) = "2" AND ([ECC_Prod_Hier]="0111A731305" O...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="225">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1111" y="835" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="REGEX_Replace([Volume Agreement Group], &quot;®&quot;, &quot;&quot;)&#xA;&#xA;/* Replace &quot;FlexPro®&quot; to &quot;FlexPro&quot; */&#xA;" field="Volume Agreement Group" size="100" type="V_WString" />
+                    <FormulaField expression="//Motor modules&#xA; If (Left([Material], 1) = &quot;2&quot; AND ([ECC_Prod_Hier]=&quot;0111A731305&quot; OR [ECC_Prod_Hier]=&quot;0118A731305&quot;)) &#xA;&#xA;THEN&#xA;[Volume Agreement Group]+&quot; Comp&quot;&#xA;ELSE&#xA;[Costing Object]&#xA;ENDIF" field="Costing Object" size="30" type="V_String" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText><![CDATA[
+distinguish between FlexPro  & FlexTouch Comp]]></AnnotationText>
+                  <DefaultAnnotationText>Volume Agreement Group = REGEX_Replace([Volume Agreement Group], "®", "")
+
+/* Re...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="204">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="654" y="1386" width="181" height="180" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Out of PUC scope</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="193">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="679" y="1435" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>REA specific: materials out of scope for PUC</AnnotationText>
+                  <DefaultAnnotationText>REA specific: materials out of scope</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="205">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="751" y="1435" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>C:\Users\okrt\AppData\Local\Temp\Engine_7488_f8b90d70576b46bea74c5de996929906_\Engine_8464_accc848e936e4d5f87213e42d2ff5bfe_.yxdb</TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="197">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="642" y="1026" width="924" height="315" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Assign Costing object to 2 (FxT &amp; FxP) and 3 (API) items based on material number</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="185">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="667" y="1075" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression><![CDATA[ //API
+ left([Material], 1) = "3" 
+
+
+ //Flexpen purchased
+ OR ([ECC_Prod_Hier] = "0111A711303" OR [ECC_Prod_Hier] = "0118A711303")
+
+ //FlexTouch
+ OR ([ECC_Prod_Hier] = "0111A731305" OR [ECC_Prod_Hier] = "0118A731305")]]></Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Materials starting with 2 (FxP &amp; FxT) &amp; 3 (API)</AnnotationText>
+                  <DefaultAnnotationText><![CDATA[ //API
+ left([Material], 1) = "3" 
+
+
+ //Flexpen purchased
+ OR ([ECC_Prod_Hier] =...]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="187">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+                <Position x="1435" y="1075" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+                  <ByName_OutputMode>All</ByName_OutputMode>
+                  <Mode>ByName</Mode>
+                  <SetOutputOrder value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Data with Costing Object</AnnotationText>
+                  <DefaultAnnotationText>Material items 2 (except Motor Modules) and  items 3 (API) with Costing Object</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+            </Node>
+            <Node ToolID="202">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+                <Position x="1183" y="1075" />
+              </GuiSettings>
+              <Properties>
+                <Configuration joinByRecordPos="False">
+                  <JoinInfo connection="Left">
+                    <Field field="Material" />
+                    <Field field="Production Department" />
+                  </JoinInfo>
+                  <JoinInfo connection="Right">
+                    <Field field="Material" />
+                    <Field field="Department" />
+                  </JoinInfo>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Join">
+                      <OrderChanged value="False" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Left_Date" selected="True" input="Left_" />
+                        <SelectField field="Left_ECC_Prod_Hier" selected="True" input="Left_" />
+                        <SelectField field="Left_Hierarchy Area" selected="True" input="Left_" />
+                        <SelectField field="Left_Material" selected="True" input="Left_" />
+                        <SelectField field="Left_Material Type" selected="True" input="Left_" />
+                        <SelectField field="Left_Plant" selected="True" input="Left_" />
+                        <SelectField field="Left_PPN" selected="True" input="Left_" />
+                        <SelectField field="Left_PRB" selected="True" input="Left_" />
+                        <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                        <SelectField field="Left_Unit of measure" selected="True" input="Left_" />
+                        <SelectField field="Left_Version" selected="True" input="Left_" />
+                        <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                        <SelectField field="Left_Volume" selected="True" input="Left_" />
+                        <SelectField field="Left_Volume Type" selected="True" input="Left_" />
+                        <SelectField field="Left_Year" selected="True" input="Left_" />
+                        <SelectField field="Right_Material" selected="False" rename="Right_Material" input="Right_" />
+                        <SelectField field="Right_Costing Object" selected="True" input="Right_" />
+                        <SelectField field="*Unknown" selected="False" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Costing Object based on Material &amp; department</AnnotationText>
+                  <DefaultAnnotationText>Costing Object based on Material &amp; department</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+            </Node>
+            <Node ToolID="203">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+                <Position x="1351" y="1195" />
+              </GuiSettings>
+              <Properties>
+                <Configuration joinByRecordPos="False">
+                  <JoinInfo connection="Left">
+                    <Field field="Material" />
+                  </JoinInfo>
+                  <JoinInfo connection="Right">
+                    <Field field="Material" />
+                  </JoinInfo>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Join">
+                      <OrderChanged value="False" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Right_Material" selected="False" rename="Right_Material" input="Right_" />
+                        <SelectField field="Right_Department" selected="False" input="Right_" />
+                        <SelectField field="*Unknown" selected="True" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Costing Object based on Material (Department is Null)</AnnotationText>
+                  <DefaultAnnotationText>Costing Object based on Material (Department is Null)</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="309">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="65" y="1110" width="447" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Material codes for API Costing Object Mapping</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="190">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="187" y="1159" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Material" selected="True" />
+                <SelectField field="Costing Object" selected="True" />
+                <SelectField field="Department" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Material
+Costing Object
+Department</AnnotationText>
+              <DefaultAnnotationText>Material
+Costing Object
+Department</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="191">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="90" y="1159" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.InputDataPath%\Material Codes.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Material Codes.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Material" size="20" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Material codes$`" type="V_String" />
+                <Field name="Costing Object" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Material codes$`" type="V_String" />
+                <Field name="Department" size="19" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Material codes$`" type="V_String" />
+                <Field name="reporting UoM" size="5" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Material codes$`" type="V_String" />
+                <Field name="Unit 2" size="5" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Material codes$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="192">
+          <GuiSettings>
+            <Position x="283" y="1159" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"Department"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">False</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>ToString (Department)</AnnotationText>
+              <DefaultAnnotationText>ToString (Department)</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="194">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="391" y="1159" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Material" />
+                <Field field="Costing Object" />
+                <Field field="Department" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>unique Costing Object based on Department &amp; Material</AnnotationText>
+              <DefaultAnnotationText>unique Costing Object based on Department &amp; Material</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="308">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="66" y="714" width="181" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Product Hierarchy</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="91" y="763" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.InputDataPath%\Product_hierarchy.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Product_hierarchy.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PPN" size="10" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+                <Field name="Description" size="50" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_WString" />
+                <Field name="Costing object packed" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+                <Field name="Group PRB" size="50" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+                <Field name="Group PPN" size="50" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+                <Field name="Costing object semi-finished" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+                <Field name="Costing object assembly" size="30" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\1_DSI\Finance\PUC 3.0\Product_hierarchy_master.xlsx|||`Product hierarchy$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2825" y="845" width="317" height="359" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>No Market Production (Test &amp; Validations)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="177">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="2850" y="894" width="154" height="285" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Permanent</Caption>
+              <Style TextColor="#314c4a" FillColor="#c0c0c0" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="176">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="2875" y="943" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression><![CDATA[[Hierarchy Area] != "1928"
+ ]]></Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>1928 Device Manufacturing Development (DMD) produce  tests &amp; validation batches (outside of PUC scope). DMD never produce for market.</AnnotationText>
+                  <DefaultAnnotationText><![CDATA[[Hierarchy Area] != "1928"
+ ]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4157" y="857" width="494" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data Output</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4182" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">%User.ProcessedDataPath%\Primary Allocated volume.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+                <WriteCompatibleVersion>False</WriteCompatibleVersion>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Primary Allocated volume.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="233">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="4278" y="906" width="348" height="72" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[Used in: 
+
+Flow 008. Cost Dual Cost Centers Allocation (PS excl. API)
+Flow 009. Join Allocated Costs & VC & Volume (PS excl. API)
+Flow 010. Join Monthly Allocated Costs & VC & Volume (API)
+]]></Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="942" y="54" width="446" height="170" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Change log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff80c0" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="147">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="967" y="103" width="396" height="96" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>2022-1-16: REA is implemented in this flow
+2023-05-2023: Assigning to Brand logic introduced
+2023-08-07: CMIQ Restructured flow</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="254">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3186" y="822" width="913" height="362" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Assign Brands</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="257">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3235" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Material" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Material" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Material Description" selected="True" input="Left_" />
+                    <SelectField field="Left_Brand Description" selected="True" input="Left_" />
+                    <SelectField field="Right_Costing Object" selected="True" input="Right_" />
+                    <SelectField field="Right_Date" selected="True" input="Right_" />
+                    <SelectField field="Right_Description" selected="True" input="Right_" />
+                    <SelectField field="Right_ECC_Prod_Hier" selected="True" input="Right_" />
+                    <SelectField field="Right_Group PPN" selected="True" input="Right_" />
+                    <SelectField field="Right_Group PRB" selected="True" input="Right_" />
+                    <SelectField field="Right_Hierarchy Area" selected="True" input="Right_" />
+                    <SelectField field="Right_Material" selected="True" input="Right_" />
+                    <SelectField field="Right_Material Type" selected="True" input="Right_" />
+                    <SelectField field="Right_Plant" selected="True" input="Right_" />
+                    <SelectField field="Right_PPN" selected="True" input="Right_" />
+                    <SelectField field="Right_PRB" selected="True" input="Right_" />
+                    <SelectField field="Right_Production Department" selected="True" input="Right_" />
+                    <SelectField field="Right_Unit of measure" selected="True" input="Right_" />
+                    <SelectField field="Right_Version" selected="True" input="Right_" />
+                    <SelectField field="Right_Version_year" selected="True" input="Right_" />
+                    <SelectField field="Right_Volume" selected="True" input="Right_" />
+                    <SelectField field="Right_Volume Type" selected="True" input="Right_" />
+                    <SelectField field="Right_Year" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="258">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3343" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="260">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3427" y="943" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if isnull([Brand Description]) Then &quot;Not Assigned&quot; ELSE [Brand Description] Endif" field="Brand Description" size="60" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Not Assigned</AnnotationText>
+              <DefaultAnnotationText>Brand Description = if isnull([Brand Description]) Then "Not Assigned" ELSE [Bra...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="279">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="3535" y="943" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>Left([Material],1)="3"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>API Materials</AnnotationText>
+              <DefaultAnnotationText>Left([Material],1)="3"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="284">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="3655" y="871" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>Costing Object</Field>
+              <ErrorHandling>Last</ErrorHandling>
+              <RootName>Brand Description API</RootName>
+              <Delimeters value="/(" />
+              <NumFields value="2" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Extract Brand for API</AnnotationText>
+              <DefaultAnnotationText>Extract Brand for API</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="285">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3727" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="286">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3835" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Brand Description] = &quot;Not assigned&quot; AND  Left([Material],1)=&quot;3&quot; &#xA;THEN [Brand Description API1] &#xA;&#xA;ELSEIF [Brand Description] = &quot;Not assigned&quot; AND [Costing Object]=&quot;No costing object&quot;&#xA;THEN &quot;Common&quot;&#xA;&#xA;ELSEIF [Brand Description] = &quot;Not assigned&quot; AND Left([Material],1)=&quot;2&quot;&#xA;THEN &quot;Components&quot;&#xA;&#xA;ELSEIF [Brand Description] = &quot;Not assigned&quot; AND [Group PPN]!=&quot;None&quot; &#xA;THEN [Group PPN]&#xA;&#xA;ELSEIF [Brand Description] = &quot;Not assigned&quot; AND [Group PRB]!=&quot;None&quot; &#xA;THEN [Group PRB]&#xA;&#xA;ELSE&#xA;[Brand Description]&#xA;&#xA;ENDIF&#xA;" field="Brand Description" size="60" type="V_WString" />
+                <FormulaField expression="If [Description]=&quot;None&quot; Then [Material Description] ELSE [Description] ENDIF&#xA;" field="Description" size="50" type="V_WString" />
+                <FormulaField expression="IF Contains(Uppercase([Description]),&quot;TEST&quot;) &#xA;OR Contains(Uppercase([Group PPN]),&quot;TEST&quot;)&#xA;THEN &quot;Test&quot;&#xA;&#xA;ELSE [Brand Description]&#xA;ENDIF" field="Brand Description" size="60" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Define logic for "Not assigned"</AnnotationText>
+              <DefaultAnnotationText>Brand Description = IF [Brand Description] = "Not assigned" AND  Left([Material]...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="289">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="3930" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Brand Description" selected="True" />
+                <SelectField field="Costing Object" selected="True" />
+                <SelectField field="Date" selected="True" />
+                <SelectField field="Description" selected="True" />
+                <SelectField field="ECC_Prod_Hier" selected="True" />
+                <SelectField field="Group PPN" selected="True" />
+                <SelectField field="Group PRB" selected="True" />
+                <SelectField field="Hierarchy Area" selected="True" />
+                <SelectField field="Material" selected="True" />
+                <SelectField field="Material Type" selected="True" />
+                <SelectField field="Plant" selected="True" />
+                <SelectField field="PPN" selected="True" />
+                <SelectField field="PRB" selected="True" />
+                <SelectField field="Production Department" selected="True" />
+                <SelectField field="Unit of measure" selected="True" />
+                <SelectField field="Version" selected="True" />
+                <SelectField field="Version_year" selected="True" />
+                <SelectField field="Volume" selected="True" />
+                <SelectField field="Volume Type" selected="True" />
+                <SelectField field="Year" selected="True" />
+                <SelectField field="Product weight" selected="True" />
+                <SelectField field="Costing object assembly" selected="True" />
+                <SelectField field="Costing object packed" selected="True" />
+                <SelectField field="Costing object semi-finished" selected="True" />
+                <SelectField field="Volume Agreement Group" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="294">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="3211" y="1135" width="378" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Not Assigned Overview BEFORE LOGIC IMPLEMENTED</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="True" />
+              <Folded value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="264">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="3307" y="1183" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                    <SummarizeField field="Material Description" action="GroupBy" rename="Material Description" />
+                    <SummarizeField field="Description" action="GroupBy" rename="Description" />
+                    <SummarizeField field="PRB" action="GroupBy" rename="PRB" />
+                    <SummarizeField field="Group PRB" action="GroupBy" rename="Group PRB" />
+                    <SummarizeField field="PPN" action="GroupBy" rename="PPN" />
+                    <SummarizeField field="Group PPN" action="GroupBy" rename="Group PPN" />
+                    <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="265">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="3235" y="1195" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Brand Description] = "Not assigned" And [Volume Type]="Produced"</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Not assigned</AnnotationText>
+                  <DefaultAnnotationText>[Brand Description] = "Not assigned" And [Volume Type]="Produced"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="299">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="3895" y="1111" width="179" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Overview of Tests</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="True" />
+              <Folded value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="297">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="3919" y="1207" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>Contains(Uppercase([Description]),"TEST") 
+OR Contains(Uppercase([Group PPN]),"TEST")</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Define Tests</AnnotationText>
+                  <DefaultAnnotationText>Contains(Uppercase([Description]),"TEST") 
+OR Contains(Uppercase([Group PPN]),"T...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="298">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4015" y="1195" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Brand Description" action="GroupBy" rename="Brand Description" />
+                    <SummarizeField field="Description" action="GroupBy" rename="Description" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="300">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="3919" y="1159" width="100" height="40" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text><![CDATA[OKRT: why do we have these vol incl. in PUC? ]]></Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="255">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="126" y="1326" width="241" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>TO BE INVESTIGATED</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="249">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="151" y="1375" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" FileFormat="23">odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*
+
+from dso.DM_Dim_Product</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=PSRP Prod
+Query=select dso.DM_Dim_Product.*...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Dim_Product_SKEY" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="Int64" />
+                <Field name="CTRL_TICKET_ID" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="Int64" />
+                <Field name="CTRL_REC_VALID_FROM" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="DateTime" />
+                <Field name="CTRL_REC_VALID_TO" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="DateTime" />
+                <Field name="CTRL_REC_OPERATION" size="1" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="String" />
+                <Field name="CTRL_SRC_ID" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="Int64" />
+                <Field name="CTRL_SRC_SKEY" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="Int64" />
+                <Field name="Dim_Prd_Level_Number" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="Int32" />
+                <Field name="Dim_Prd_Level_Name" size="50" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Dim_Level_Key" size="50" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="ECC_PH_String" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Mgmt" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Mgmt_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Division" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Division_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PRB_Group" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PRB_Group_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PRB" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PRB_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PPN_Group" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PPN_Group_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PPN" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="PPN_TXT" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Material" size="20" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+                <Field name="Material_Desc" size="255" source="File: odbc:DSN=PSRP Prod|||select dso.DM_Dim_Product.*&#xA;&#xA;from dso.DM_Dim_Product" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="250">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="235" y="1375" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Dim_Prd_Level_Name]="Materiale"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Dim_Prd_Level_Name]="Materiale"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="245">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1794" y="810" width="290" height="261" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filter out Oral Sema Bulk for 1940</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="244">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1819" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Hierarchy Area] = "1940" and [Costing Object] = "Oral sema bulk"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Oral Sema Bulk &amp; CVP  = 1940</AnnotationText>
+              <DefaultAnnotationText>[Hierarchy Area] = "1940" and [Costing Object] = "Oral sema bulk"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="246">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1819" y="859" width="240" height="60" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>22032023 - CMIQ - DVBN CPV 1940 shows as bulk activities which is wrong since 1940 (IFP Ka) is involved in packing oral sema.</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="117">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="66" y="534" width="324" height="149" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input from 005. Volume Pre-processing (PS)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="91" y="583" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.ProcessedDataPath%\Preprocess_volume.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Load volume data</AnnotationText>
+              <DefaultAnnotationText>Preprocess_volume.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" source="(Multiple Sources) (BatchMacro) (BatchMacro)" type="Date" />
+                <Field name="ECC_Prod_Hier" size="30" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Hierarchy Area" size="100" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Material" size="20" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Material Type" size="20" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Plant" size="19" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="PPN" size="10" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="PRB" size="10" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Production Department" size="50" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Unit of measure" size="5" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Version" size="15" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Version_year" size="13" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Volume" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Double" />
+                <Field name="Volume Type" size="30" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Year" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+                <Field description="Used in Volumes to product to create Costing Obejct" name="Volume Agreement Group" size="100" source="Formula: [_CurrentField_]" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="160">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="187" y="583" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date" selected="True" />
+                <SelectField field="ECC_Prod_Hier" selected="True" />
+                <SelectField field="Hierarchy Area" selected="True" />
+                <SelectField field="Material" selected="True" />
+                <SelectField field="Material Type" selected="True" />
+                <SelectField field="Plant" selected="True" />
+                <SelectField field="PPN" selected="True" />
+                <SelectField field="PRB" selected="True" />
+                <SelectField field="Production Department" selected="True" />
+                <SelectField field="Unit of measure" selected="True" />
+                <SelectField field="Version" selected="True" />
+                <SelectField field="Version_year" selected="True" />
+                <SelectField field="Volume" selected="True" />
+                <SelectField field="Volume Type" selected="True" />
+                <SelectField field="Year" selected="True" />
+                <SelectField field="Volume Agreement Group" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="224">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1807" y="1219" width="224" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Assign PRB &amp; PPN Details</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="220">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2323" y="1351" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Material" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Material" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_PRB" selected="True" rename="Right_PRB" input="Right_" />
+                    <SelectField field="Right_PPN" selected="True" rename="Right_PPN" input="Right_" />
+                    <SelectField field="Right_Material" selected="False" rename="Right_Material" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Join on Material level</AnnotationText>
+              <DefaultAnnotationText>Join on Material level</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="222">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2443" y="1351" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="223">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2527" y="1351" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if IsNull([Group PRB]) or [Group PRB]=&quot;N/A&quot; or isempty([Group PRB])&#xA;THEN&#xA;[PRB_Group]&#xA;ELSE&#xA;[Group PRB]&#xA;ENDIF" field="Group PRB" size="50" type="V_String" />
+                <FormulaField expression="if IsNull([Group PPN]) or [Group PPN]=&quot;N/A&quot; or isempty([Group PPN])&#xA;THEN&#xA;[PPN_Group]&#xA;ELSE&#xA;[PPN_Group]&#xA;ENDIF" field="Group PPN" size="50" type="V_String" />
+                <FormulaField expression="if IsNull([Description]) or [Description]=&quot;N/A&quot; or isempty([Description])&#xA;THEN&#xA;[Material_Desc]&#xA;ELSE&#xA;[Description]&#xA;ENDIF" field="Description" size="50" type="V_WString" />
+                <FormulaField expression="if IsNull([PRB]) or [PRB]=&quot;N/A&quot; or isempty([PRB])&#xA;THEN&#xA;[Right_PRB]&#xA;ELSE&#xA;[PRB]&#xA;ENDIF" field="PRB" size="10" type="V_WString" />
+                <FormulaField expression="if IsNull([PPN]) or [PPN]=&quot;N/A&quot; or isempty([PPN])&#xA;THEN&#xA;[Right_PPN]&#xA;ELSE&#xA;[PPN]&#xA;ENDIF" field="PPN" size="10" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Update based on Material:
+PRB
+PPN
+Group PRB
+Group PPN
+Description</AnnotationText>
+              <DefaultAnnotationText>Group PRB = if IsNull([Group PRB]) or [Group PRB]="N/A" or isempty([Group PRB])
+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="216">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1831" y="1267" width="371" height="50" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Add to flow 000. RBR &amp; PPN &amp; Material descriptions</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="True" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="211">
+              <GuiSettings Plugin="LockInGui.LockInInput.LockInInput">
+                <Position x="1855" y="1399" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Connection>PSRP Prod</Connection>
+                  <Query>select dso.DM_Dim_Product.* 
+from dso.DM_Dim_Product</Query>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>Source=PSRP Prod
+Query=select dso.DM_Dim_Product.* ...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInInput" />
+            </Node>
+            <Node ToolID="212">
+              <GuiSettings Plugin="LockInGui.LockInBrowse.LockInBrowse">
+                <Position x="1927" y="1315" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <CurrentTempFile>C:\Users\okrt\AppData\Local\Temp\Engine_24952_9c85ddb0f570410981c68250cf275f9b_\Engine_20804_578488dcf4da4457bfec16e1e1aa0755_._AlteryxInDBBrowseCache_a731cf89d6d58952b9f575f15ecb86b5.yxdb</CurrentTempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                  <FirstNRecords>100</FirstNRecords>
+                  <UseCache value="True" />
+                  <DataFromCache>True</DataFromCache>
+                  <CacheKey>a731cf89d6d58952b9f575f15ecb86b5</CacheKey>
+                  <TempFile>C:\Users\okrt\AppData\Local\Temp\Engine_20804_._AlteryxInDBBrowseCache_a731cf89d6d58952b9f575f15ecb86b5.yxdb</TempFile>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>First 100 records
+Caching enabled</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInBrowse" />
+            </Node>
+            <Node ToolID="213">
+              <GuiSettings Plugin="LockInGui.LockInSelect.LockInSelect">
+                <Position x="2035" y="1387" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="PRB_Group" selected="True" />
+                    <SelectField field="PRB_Group_TXT" selected="True" />
+                    <SelectField field="PRB" selected="True" />
+                    <SelectField field="PRB_TXT" selected="True" />
+                    <SelectField field="PPN_Group" selected="True" />
+                    <SelectField field="PPN_Group_TXT" selected="True" />
+                    <SelectField field="PPN" selected="True" />
+                    <SelectField field="PPN_TXT" selected="True" />
+                    <SelectField field="Material" selected="True" />
+                    <SelectField field="Material_Desc" selected="True" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSelect" />
+            </Node>
+            <Node ToolID="214">
+              <GuiSettings Plugin="LockInGui.LockInStreamOut.LockInStreamOut">
+                <Position x="2191" y="1387" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Sort value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamOut" />
+            </Node>
+            <Node ToolID="218">
+              <GuiSettings Plugin="LockInGui.LockInSummarize.LockInSummarize">
+                <Position x="2119" y="1387" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="PRB" action="GroupBy" rename="PRB" />
+                    <SummarizeField field="PPN" action="GroupBy" rename="PPN" />
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                    <SummarizeField field="PRB_Group" action="GroupBy" rename="PRB_Group" />
+                    <SummarizeField field="PRB_Group_TXT" action="GroupBy" rename="PRB_Group_TXT" />
+                    <SummarizeField field="PPN_Group" action="GroupBy" rename="PPN_Group" />
+                    <SummarizeField field="PPN_TXT" action="GroupBy" rename="PPN_TXT" />
+                    <SummarizeField field="Material_Desc" action="GroupBy" rename="Material_Desc" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSummarize" />
+            </Node>
+            <Node ToolID="219">
+              <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+                <Position x="1951" y="1399" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Custom</Mode>
+                  <Expression>"Dim_Prd_Level_Name" = 'Materiale'</Expression>
+                  <ValidateBeforeRun value="True" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Remove no materials</AnnotationText>
+                  <DefaultAnnotationText>"Dim_Prd_Level_Name" = 'Materiale'</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="171">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2142" y="823" width="313" height="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Assign Product weight</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="61">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2167" y="943" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Old Costing object" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Costing Object" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Costing Object" selected="False" input="Right_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Right_Costing object assembly" selected="False" input="Right_" />
+                    <SelectField field="Right_Costing object packed" selected="False" input="Right_" />
+                    <SelectField field="Right_Costing object semi-finished" selected="False" input="Right_" />
+                    <SelectField field="Right_Date" selected="True" input="Right_" />
+                    <SelectField field="Right_Description" selected="True" input="Right_" />
+                    <SelectField field="Right_ECC_Prod_Hier" selected="True" input="Right_" />
+                    <SelectField field="Right_Group PPN" selected="True" input="Right_" />
+                    <SelectField field="Right_Group PRB" selected="True" input="Right_" />
+                    <SelectField field="Right_Hierarchy Area" selected="True" input="Right_" />
+                    <SelectField field="Right_Material" selected="True" input="Right_" />
+                    <SelectField field="Right_Material Type" selected="True" input="Right_" />
+                    <SelectField field="Left_New Costing Object" selected="False" rename="Costing Object" />
+                    <SelectField field="Left_Old Costing object" selected="False" input="Left_" />
+                    <SelectField field="Right_Plant" selected="True" input="Right_" />
+                    <SelectField field="Right_PPN" selected="True" input="Right_" />
+                    <SelectField field="Right_PRB" selected="True" input="Right_" />
+                    <SelectField field="Left_Product weight" selected="True" input="Left_" />
+                    <SelectField field="Right_Production Department" selected="True" input="Right_" />
+                    <SelectField field="Right_Unit of measure" selected="True" input="Right_" />
+                    <SelectField field="Right_Version" selected="True" input="Right_" />
+                    <SelectField field="Right_Version_year" selected="True" input="Right_" />
+                    <SelectField field="Right_Volume" selected="True" input="Right_" />
+                    <SelectField field="Right_Volume Agreement Group" selected="False" input="Right_" />
+                    <SelectField field="Right_Volume Type" selected="True" input="Right_" />
+                    <SelectField field="Right_Year" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="62">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2263" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Product weight]*[Volume]" field="Volume" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>apply weight to FxP component volume</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Volume = [Product weight]*[Volume]
+ ]]></DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2371" y="943" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4925" y="245" width="555" height="1730" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Validations</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="136">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="822" width="435" height="177" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Check if version_year, version or year are empty or not matching</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="133">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4975" y="883" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="Date" action="Min" rename="Min_Date" />
+                    <SummarizeField field="Date" action="Max" rename="Max_Date" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="134">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5191" y="871" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>0=0</Filter>
+                  <Type>Error</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Flow 002: Version_year, version or year is empty for one or version_year and year are not matching. This is not allowed as it will create duplicate data in the following flows. " + ToString([Year]) + ", "+ [Version_year] + ", "+ [Version]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+            <Node ToolID="135">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="5071" y="883" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>(
+IsNull([Version])
+or 
+IsNull([Version_year])
+or 
+IsNull([Version_year])
+or 
+Right([Version_year], 2) != Right(ToString([Year], 0),2)
+or 
+DateTimeYear([Min_Date])!=DateTimeYear([Max_Date])
+)
+and 
+!Contains([Version_year],'_TEMP')</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Empty version_year</AnnotationText>
+                  <DefaultAnnotationText>(
+IsNull([Version])
+or 
+IsNull([Version_year])
+or 
+IsNull([Version_year])
+or 
+Ri...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="161">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="294" width="409" height="161" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>5 &amp; 7 items missing mapping in Prod Hierarchy master data</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="51">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4975" y="354" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="PPN" action="GroupBy" rename="PPN" />
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="92">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="5095" y="355" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[PPN] != "None"</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[PPN] != "None"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="206">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5203" y="343" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>Normal</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>" PPN " +  [PPN]+ " Material  " +[Material] +" not defined in Product hierarchy."</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="164">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="462" width="332" height="133" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Motor modules &amp; Tablets missing PRB details</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="53">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4975" y="511" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="PRB" action="GroupBy" rename="PRB" />
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="54">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5071" y="511" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>Normal</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Section 2: PRB " + [PRB] + " and Material: "+ [Material] +" not defined in PRB codes in Product_hierarchy_master_NEWPUC."</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="167">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="606" width="383" height="161" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption><![CDATA[ material number (2 & 3 items) missing in the mapping]]></Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="56">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4975" y="667" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Hierarchy Area" action="GroupBy" rename="Hierarchy Area" />
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                    <SummarizeField field="Production Department" action="GroupBy" rename="Production Department" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="57">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5179" y="655" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>Normal</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression><![CDATA["Section 3: Material " + [Material] + " CVP area "+ [Hierarchy Area] + " not defined in Material Codes mapping table in Product_hierarchy_master" ]]></MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+            <Node ToolID="301">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="5071" y="667" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Hierarchy Area] != "1954"
+
+/*excl. BRD*/</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>excl. BRD</AnnotationText>
+                  <DefaultAnnotationText>[Hierarchy Area] != "1954"
+
+/*excl. BRD*/</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="237">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="1014" width="261" height="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Checks for blank Costing Objects</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="234">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="4975" y="1063" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>IsNull</Operator>
+                    <Field>Costing Object</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2023-02-17 13:43:48</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>
+                      </Operand>
+                      <StartDate>2023-02-17 13:43:48</StartDate>
+                      <EndDate>2023-02-17 13:43:48</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>IsNull([Costing Object])</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="236">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5071" y="1063" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>First</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Costing Object comes out blank. Update Product hierarchy! PPN: "+ [PPN] + " "+ [Group PPN]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="240">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="1194" width="261" height="165" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Checks for blank Costing Objects</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="238">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="4975" y="1243" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>IsNull</Operator>
+                    <Field>Costing Object</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2023-02-17 13:43:48</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>
+                      </Operand>
+                      <StartDate>2023-02-17 13:43:48</StartDate>
+                      <EndDate>2023-02-17 13:43:48</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>IsNull([Costing Object])</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="239">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5071" y="1243" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>First</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Costing Object comes out blank. Update PRB Codes mapping! PRB: "+[PRB]+" "+[Group PRB]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="243">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="1338" width="261" height="207" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Checks for blank Costing Objects</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="241">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="4975" y="1399" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>IsNull([Costing Object]) or
+IsEmpty([Costing Object])</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>IsNull([Costing Object]) or
+IsEmpty([Costing Object])</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="242">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5071" y="1387" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>First</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Costing Object comes out blank. Update Material codes mapping!  Material"+[Material]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="290">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="1554" width="413" height="192" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Not Assigned to Brand level. Define logic for these materials</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="287">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="5059" y="1603" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                    <SummarizeField field="Material Description" action="GroupBy" rename="Material Description" />
+                    <SummarizeField field="Description" action="GroupBy" rename="Description" />
+                    <SummarizeField field="PRB" action="GroupBy" rename="PRB" />
+                    <SummarizeField field="Group PRB" action="GroupBy" rename="Group PRB" />
+                    <SummarizeField field="PPN" action="GroupBy" rename="PPN" />
+                    <SummarizeField field="Group PPN" action="GroupBy" rename="Group PPN" />
+                    <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="288">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="4975" y="1615" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Brand Description] = "Not assigned"</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Brand Description] = "Not assigned"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="291">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5155" y="1603" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>First</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Not assigned to any Brand. Define the logic for Material"+[Material]+" "+[Description]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="292">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="4950" y="1758" width="505" height="192" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption><![CDATA[ Brand Description Doublicates on these materials. Define which Brand to use]]></Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="266">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="4975" y="1819" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                    <SummarizeField field="Material Description" action="GroupBy" rename="Material Description" />
+                    <SummarizeField field="Brand Description" action="CountDistinct" rename="CountDistinct_Brand Description" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="267">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="5071" y="1819" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;=</Operator>
+                    <Field>CountDistinct_Brand Description</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2023-05-17 09:23:55</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>2</Operand>
+                      <StartDate>2023-05-17 09:23:55</StartDate>
+                      <EndDate>2023-05-17 09:23:55</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[CountDistinct_Brand Description] &gt;= 2</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="293">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="5155" y="1807" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>First</When>
+                  <Filter>0=0</Filter>
+                  <Type>Warning</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Brand Description Doublicates for these materials: "+[Material]+" "+[Material Description]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="295">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="1566" width="445" height="219" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Brand Mapping</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="248">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="1639" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" FileFormat="23">odbc:DSN=PSRP Prod|||select dsi.BW_DIM_Brand_Master.[0MATERIAL],
+	dsi.BW_DIM_Brand_Master.[0MATERIAL_T],
+	dsi.BW_DIM_Brand_Master.IOS_BRAND_T 
+from dsi.BW_DIM_Brand_Master</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <ReadCentroids>False</ReadCentroids>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <NoProgress>True</NoProgress>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=PSRP Prod
+Query=select dsi.BW_DIM_Brand_Mast...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="0MATERIAL" size="60" source="File: odbc:DSN=PSRP Prod|||select dsi.BW_DIM_Brand_Master.[0MATERIAL],&#xA;	dsi.BW_DIM_Brand_Master.[0MATERIAL_T],&#xA;	dsi.BW_DIM_Brand_Master.IOS_BRAND_T &#xA;from dsi.BW_DIM_Brand_Master" type="V_WString" />
+                <Field name="0MATERIAL_T" size="60" source="File: odbc:DSN=PSRP Prod|||select dsi.BW_DIM_Brand_Master.[0MATERIAL],&#xA;	dsi.BW_DIM_Brand_Master.[0MATERIAL_T],&#xA;	dsi.BW_DIM_Brand_Master.IOS_BRAND_T &#xA;from dsi.BW_DIM_Brand_Master" type="V_WString" />
+                <Field name="IOS_BRAND_T" size="60" source="File: odbc:DSN=PSRP Prod|||select dsi.BW_DIM_Brand_Master.[0MATERIAL],&#xA;	dsi.BW_DIM_Brand_Master.[0MATERIAL_T],&#xA;	dsi.BW_DIM_Brand_Master.IOS_BRAND_T &#xA;from dsi.BW_DIM_Brand_Master" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="269">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="163" y="1639" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!IsNull([0MATERIAL])
+AND
+!Contains([0MATERIAL_T],"PRISM Material – DO NOT USE")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Not relevant</AnnotationText>
+              <DefaultAnnotationText>!IsNull([0MATERIAL])
+AND
+!Contains([0MATERIAL_T],"PRISM Material – DO NOT USE")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="275">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="247" y="1627" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([0MATERIAL] == &quot;0&quot;,&quot;0&quot;, TRIMLEFT([0MATERIAL],&quot;0&quot;))" field="Material" size="1073741823" type="V_WString" />
+                <FormulaField expression="Length([Material])" field="Len" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Remove Leading Zeros
+]]></AnnotationText>
+              <DefaultAnnotationText>Material = IIF([0MATERIAL] == "0","0", TRIMLEFT([0MATERIAL],"0"))
+Len = Length([...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="276">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="343" y="1627" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Len] = 7 
+AND
+LEFT([Material],1) IN ( "2","3","4","5","7")
+AND
+!Contains([IOS_BRAND_T],"Not assigned")
+
+/*
+2 - semi-finished. FxP &amp; FxT Components CSDS
+3 - semi-finished. API &amp; BRD
+4 - semi-finished. Formulation IFP &amp; OFP
+5 - semi-finished. Fill, Assembly 
+7 - Packed
+*/</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Materials in scope</AnnotationText>
+              <DefaultAnnotationText>[Len] = 7 
+AND
+LEFT([Material],1) IN ( "2","3","4","5","7")
+AND
+!Contains([IOS_B...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="277">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="415" y="1615" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Material" action="GroupBy" rename="Material" />
+                <SummarizeField field="0MATERIAL_T" action="GroupBy" rename="Material Description" />
+                <SummarizeField field="IOS_BRAND_T" action="GroupBy" rename="Brand Description" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="318" Connection="Output" />
+      <Destination ToolID="321" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="317" Connection="False" />
+      <Destination ToolID="321" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="True" />
+      <Destination ToolID="318" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="321" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="True" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="61" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="244" Connection="False" />
+      <Destination ToolID="61" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="244" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="225" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="234" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Join" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="138" Connection="Left" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="True" />
+      <Destination ToolID="138" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="138" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="False" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="34" Connection="Left" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="225" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="43" Connection="False" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="225" Connection="Output" />
+      <Destination ToolID="238" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="193" Connection="Output" />
+      <Destination ToolID="205" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="False" />
+      <Destination ToolID="193" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="True" />
+      <Destination ToolID="202" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="194" Connection="Unique" />
+      <Destination ToolID="202" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="241" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Left" />
+      <Destination ToolID="203" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Right" />
+      <Destination ToolID="203" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="202" Connection="Join" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="203" Connection="Join" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="203" Connection="Left" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="190" Connection="Output" />
+      <Destination ToolID="192" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="191" Connection="Output" />
+      <Destination ToolID="190" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="Output26" />
+      <Destination ToolID="194" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="True" />
+      <Destination ToolID="257" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="277" Connection="Output" />
+      <Destination ToolID="257" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="257" Connection="Join" />
+      <Destination ToolID="258" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="257" Connection="Right" />
+      <Destination ToolID="258" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="258" Connection="Output" />
+      <Destination ToolID="260" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="260" Connection="Output" />
+      <Destination ToolID="265" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="260" Connection="Output" />
+      <Destination ToolID="279" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="279" Connection="True" />
+      <Destination ToolID="284" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="279" Connection="False" />
+      <Destination ToolID="285" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="284" Connection="Output" />
+      <Destination ToolID="285" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="285" Connection="Output" />
+      <Destination ToolID="286" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="285" Connection="Output" />
+      <Destination ToolID="297" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="286" Connection="Output" />
+      <Destination ToolID="288" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="286" Connection="Output" />
+      <Destination ToolID="289" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="289" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="289" Connection="Output" />
+      <Destination ToolID="317" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="265" Connection="True" />
+      <Destination ToolID="264" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="297" Connection="True" />
+      <Destination ToolID="298" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="249" Connection="Output" />
+      <Destination ToolID="250" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="220" Connection="Join" />
+      <Destination ToolID="222" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="220" Connection="Left" />
+      <Destination ToolID="222" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="222" Connection="Output" />
+      <Destination ToolID="223" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="211" Connection="Output" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="211" Connection="Output" />
+      <Destination ToolID="219" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="218" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Output" />
+      <Destination ToolID="220" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="Output" />
+      <Destination ToolID="214" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="219" Connection="True" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="61" Connection="Right" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="True" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="True" />
+      <Destination ToolID="206" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="301" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="True" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="234" Connection="True" />
+      <Destination ToolID="236" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="238" Connection="True" />
+      <Destination ToolID="239" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="241" Connection="True" />
+      <Destination ToolID="242" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="287" Connection="Output" />
+      <Destination ToolID="291" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="288" Connection="True" />
+      <Destination ToolID="287" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="266" Connection="Output" />
+      <Destination ToolID="267" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="267" Connection="True" />
+      <Destination ToolID="293" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="248" Connection="Output" />
+      <Destination ToolID="269" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="269" Connection="True" />
+      <Destination ToolID="275" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="275" Connection="Output" />
+      <Destination ToolID="276" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="276" Connection="True" />
+      <Destination ToolID="277" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="277" Connection="Output" />
+      <Destination ToolID="266" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>ProcessedDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\PUC Processed data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>InputDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\Alteryx input data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>007. Volume to Products (PS)</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="cf5e7b04-17a6-4956-8c3b-e7f20b60dfaa" />
+      <Telemetry>
+        <PreviousWorkflowId value="aedc3d49-ec63-4791-8155-92cfd67e364c" />
+        <OriginWorkflowId value="aedc3d49-ec63-4791-8155-92cfd67e364c" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

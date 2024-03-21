@@ -1,0 +1,2098 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="121" y="58" width="1536" height="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Dual cost centers allocation
+Several Costing Objects per  Prod. Department &amp; Cost Center. We need to re balance cost between these Costing Objects</Text>
+          <Font name="Arial" size="15.75" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2264" y="884" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Cost Base" selected="True" />
+            <SelectField field="Cost Center" selected="True" />
+            <SelectField field="Cost Center Name" selected="True" />
+            <SelectField field="Cost Center SAP" selected="True" />
+            <SelectField field="Cost Element" selected="True" />
+            <SelectField field="Costing Object" selected="True" />
+            <SelectField field="Costing weight" selected="False" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Cycle Name" selected="False" />
+            <SelectField field="Cycle Name Description" selected="True" />
+            <SelectField field="Date" selected="True" />
+            <SelectField field="Hierarchy Area" selected="True" />
+            <SelectField field="Partner Cost Center" selected="True" />
+            <SelectField field="Plant" selected="True" />
+            <SelectField field="Process" selected="True" />
+            <SelectField field="Production Area" selected="True" />
+            <SelectField field="Subprocess" selected="True" />
+            <SelectField field="Technical cost center group" selected="True" />
+            <SelectField field="Version" selected="True" />
+            <SelectField field="Version_year" selected="True" />
+            <SelectField field="Volume" selected="False" />
+            <SelectField field="Volume Type" selected="True" />
+            <SelectField field="Year" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="265">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="462" y="149" width="188" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>TEST STJ FxP &amp; FxT</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="264">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="487" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Production Department] IN ("069-90720","069-90740") AND [Version_year] in ("R23") AND [Date]!="2023-07-01"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Production Department] IN ("069-90720","069-90740") AND [Version_year] in ("R23...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="266">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="559" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                <SummarizeField field="Production Department" action="GroupBy" rename="Production Department" />
+                <SummarizeField field="Volume" action="Sum" rename="Sum_Volume" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3775" y="799" width="643" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>TO BE DELETED_OBSOLETE. Check if manual mapping for FxT &amp; FxP Components exist for current year</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="168">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3896" y="884" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Year" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="169">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3800" y="920" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeYear([Date])" field="Year" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Year = DateTimeYear([Date])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="170">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+            <Position x="4088" y="896" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <When>Last</When>
+              <Filter>0=0</Filter>
+              <Type>Warning</Type>
+              <Priority>High</Priority>
+              <Transient>False</Transient>
+              <MessageExpression><![CDATA["Add Cost_element_secondary manual mapping for FxT & FxP Components to " + ToString([Year]) ]]></MessageExpression>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+        </Node>
+        <Node ToolID="171">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="3800" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Year" selected="True" type="Int32" size="4" />
+                <SelectField field="Cost Center" selected="False" />
+                <SelectField field="Cost Element" selected="False" />
+                <SelectField field="Costing Object" selected="False" />
+                <SelectField field="Hierarchy Area" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="172">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="3980" y="896" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Year" action="GroupBy" rename="Year" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2347" y="835" width="245" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Output</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2372" y="884" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">%User.ProcessedDataPath%\Allocated cost final.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+                <WriteCompatibleVersion>False</WriteCompatibleVersion>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Allocated cost final.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="261">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="2467" y="895" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Used in: 
+Flow 009. Join Allocated Costs &amp; VC &amp; Volume (PS excl. API)</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="356" y="849" width="287" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input from 007. Cost to Products (PS)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="73">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="381" y="898" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.ProcessedDataPath%\Primary Allocated cost.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Primary Allocated cost.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Cost Base" source="Summarize: Sum - Cost Base" type="Double" />
+                <Field name="Cost Center" size="255" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Cost Center SAP" size="10" source="(Multiple Sources)" type="V_String" />
+                <Field name="Cost Element" size="10" source="Summarize: GroupBy - Cost Element" type="V_WString" />
+                <Field name="Costing Object" size="30" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Currency" size="3" source="Summarize: GroupBy - Currency" type="V_WString" />
+                <Field name="Cycle Name" size="50" source="Summarize: GroupBy - Cycle Name" type="V_WString" />
+                <Field name="Date" source="Summarize: GroupBy - Date" type="DateTime" />
+                <Field name="Partner Cost Center" size="10" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Plant" size="19" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Process" size="20" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Production Area" size="20" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Subprocess" size="20" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Technical cost center group" size="255" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Version" size="15" source="Summarize: GroupBy - Version" type="V_WString" />
+                <Field name="Version_year" size="13" source="Summarize: GroupBy - Version_year" type="V_String" />
+                <Field name="Year" source="Summarize: GroupBy - Year" type="Int32" />
+                <Field name="Cost Center Name" size="50" source="File: odbc:DSN=PSRP Prod|||SELECT [Cost_Center]&#xA;      ,[Cost_Center_Description]&#xA;      ,[Cost_Center_Category]&#xA;      ,[Cost_Center_Category_Description]&#xA;      ,[Country]&#xA;      ,[Currency]&#xA;      ,[CC_Hierarchy_Lvl1]&#xA;      ,[CC_Hierarchy_Lvl1_Description]&#xA;      ,[CC_Hierarchy_Lvl2]&#xA;      ,[CC_Hierarchy_Lvl2_Description]&#xA;      ,[CC_Hierarchy_Lvl3]&#xA;      ,[CC_Hierarchy_Lvl3_Description]&#xA;      ,[CC_Hierarchy_Lvl4]&#xA;      ,[CC_Hierarchy_Lvl4_Description]&#xA;      ,[CC_Hierarchy_Lvl5]&#xA;      ,[CC_Hierarchy_Lvl5_Description]&#xA;      ,[CC_Hierarchy_Lvl6]&#xA;      ,[CC_Hierarchy_Lvl6_Description]&#xA;      ,[Company_Code]&#xA;      ,[Company_Code_Description]&#xA;      ,[Department]&#xA;      ,[Department_Description]&#xA;      ,[Profit_Center]&#xA;      ,[Profit_Center_Description]&#xA;      ,[PC_Hierarchy_Lvl1]&#xA;      ,[PC_Hierarchy_Lvl1_Description]&#xA;      ,[PC_Hierarchy_Lvl2]&#xA;      ,[PC_Hierarchy_Lvl2_Description]&#xA;      ,[PC_Hierarchy_Lvl3]&#xA;      ,[PC_Hierarchy_Lvl3_Description]&#xA;      ,[PC_Hierarchy_Lvl4]&#xA;      ,[PC_Hierarchy_Lvl4_Description]&#xA;      ,[PC_Hierarchy_Lvl5]&#xA;      ,[PC_Hierarchy_Lvl5_Description]&#xA;      ,[PC_Hierarchy_Lvl6]&#xA;      ,[PC_Hierarchy_Lvl6_Description]&#xA;			,StartDateTime&#xA;			,EndDateTime&#xA;  FROM [ada].[dso].[BW_FI_DIM_OrgStructure_V] --where Cost_Center_Category &lt;&gt; 'Not assigned'" type="V_WString" />
+                <Field name="Hierarchy Area" size="10" source="Formula: [CVP Area]" type="V_String" />
+                <Field name="Cycle Name Description" size="50" source="Formula: (Multiple Sources)" type="V_String" />
+                <Field name="Volume Type" size="8" source="TextInput:" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="477" y="898" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>left([Hierarchy Area],3) != "193"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>exclude DAPI</AnnotationText>
+              <DefaultAnnotationText>left([Hierarchy Area],3) != "193"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1711" y="633" width="518" height="387" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Allocation Based on Produced Volume for Dual Cost centers</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1929" y="874" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Version" />
+                <Field field="Cost Center" />
+                <Field field="Date" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Version" />
+                <Field field="Cost Center" />
+                <Field field="Date" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Cost Base" selected="True" input="Right_" />
+                    <SelectField field="Right_Cost Center" selected="False" rename="Right_Cost Center" input="Right_" />
+                    <SelectField field="Left_Cost Center" selected="True" input="Left_" />
+                    <SelectField field="Right_Cost Center Name" selected="True" input="Right_" />
+                    <SelectField field="Right_Cost Center SAP" selected="True" input="Right_" />
+                    <SelectField field="Right_Cost Element" selected="True" input="Right_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Right_Costing Object" selected="False" rename="Right_Costing Object" input="Right_" />
+                    <SelectField field="Left_Costing weight" selected="True" input="Left_" />
+                    <SelectField field="Right_Currency" selected="True" input="Right_" />
+                    <SelectField field="Right_Cycle Name" selected="False" input="Right_" />
+                    <SelectField field="Right_Cycle Name Description" selected="True" input="Right_" />
+                    <SelectField field="Left_Date" selected="True" input="Left_" />
+                    <SelectField field="Right_Date" selected="False" rename="Right_Date" input="Right_" />
+                    <SelectField field="Right_Hierarchy Area" selected="True" input="Right_" />
+                    <SelectField field="Right_Partner Cost Center" selected="True" input="Right_" />
+                    <SelectField field="Right_Plant" selected="True" input="Right_" />
+                    <SelectField field="Right_Process" selected="True" input="Right_" />
+                    <SelectField field="Right_Production Area" selected="True" input="Right_" />
+                    <SelectField field="Right_Subprocess" selected="True" input="Right_" />
+                    <SelectField field="Right_Technical cost center group" selected="True" input="Right_" />
+                    <SelectField field="Right_Version" selected="False" rename="Right_Version" input="Right_" />
+                    <SelectField field="Left_Version" selected="True" input="Left_" />
+                    <SelectField field="Right_Version_year" selected="False" rename="Right_Version_year" input="Right_" />
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume factor" selected="False" input="Left_" />
+                    <SelectField field="Right_Volume Type" selected="True" input="Right_" />
+                    <SelectField field="Right_Year" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>JOIN  VOLUME for Dual Cost Centers with PUC  COST</AnnotationText>
+              <DefaultAnnotationText>JOIN  VOLUME for Dual Cost Centers with PUC  COST</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2145" y="886" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2025" y="802" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Cost Base]*[Costing weight]" field="Cost Base" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Recalc Cost based for Dual Cost Centers</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Cost Base = [Cost Base]*[Costing weight]
+ ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1736" y="682" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Produced Volume for DUAL
+1) Production department
+2) Alternative Department
+3) Cost center/Date/Version</AnnotationText>
+              <DefaultAnnotationText>Dual Cost Centers based on 
+1) Production department
+2) Alternative Department
+3) Cost center/Date/Version</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="72">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1845" y="682" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Cost Center" action="GroupBy" rename="Cost Center" />
+                <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                <SummarizeField field="Costing weight" action="Sum" rename="Costing weight" />
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                <SummarizeField field="Volume" action="Sum" rename="Volume" />
+                <SummarizeField field="Volume factor" action="Sum" rename="Volume factor" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Prod. Vol per Cost Center &amp; Costing Object</AnnotationText>
+              <DefaultAnnotationText>Prod. Vol per Cost Center &amp; Costing Object</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1124" y="573" width="457" height="257" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dual Cost Centers</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="62">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1149" y="646" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Cost Center" action="GroupBy" rename="Cost Center" />
+                <SummarizeField field="Costing weight" action="Sum" rename="Costing weight" />
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Costing weight per Cost Center</AnnotationText>
+              <DefaultAnnotationText>Costing weight per Cost Center</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1377" y="730" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Date & Version ]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Date & Version ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1257" y="646" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Costing weight</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2021-10-01 13:49:55</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2021-10-01 13:49:55</StartDate>
+                  <EndDate>2021-10-01 13:49:55</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Dual cost centers with the full value (weight = 1) ]]></AnnotationText>
+              <DefaultAnnotationText>[Costing weight] = 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="133">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1377" y="622" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Cost Center" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Cost Center" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Cost Center" selected="True" input="Left_" />
+                    <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume factor" selected="True" input="Left_" />
+                    <SelectField field="Left_Costing Weight" selected="True" input="Left_" />
+                    <SelectField field="Left_Alternative Department" selected="True" input="Left_" />
+                    <SelectField field="Right_Cost Center" selected="False" rename="Right_Cost Center" input="Right_" />
+                    <SelectField field="Right_Costing weight" selected="False" rename="Right_Costing weight" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Dual Cost Centers not captured by Departments info</AnnotationText>
+              <DefaultAnnotationText>Dual Cost Centers not captured by Departments info</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="205">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1497" y="682" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Cost Center" selected="True" input="Left_" />
+                    <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume factor" selected="True" input="Left_" />
+                    <SelectField field="Left_Costing Weight" selected="True" input="Left_" />
+                    <SelectField field="Left_Alternative Department" selected="True" input="Left_" />
+                    <SelectField field="Right_Date" selected="True" input="Right_" />
+                    <SelectField field="Right_Version" selected="True" input="Right_" />
+                    <SelectField field="Right_Version_year" selected="False" rename="Right_Version_year" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="126" y="233" width="325" height="237" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Input from 006. Volume to Products (PS)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="259" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression><![CDATA[[Volume Type] = "Produced"
+and 
+!IsNull([Production Department])
+]]></Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[[Volume Type] = "Produced"
+and 
+!IsNull([Production Department])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="151" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.ProcessedDataPath%\Primary Allocated volume.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Primary Allocated volume.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Brand Description" size="60" source="Formula: IF Contains(Uppercase([Description]),&quot;TEST&quot;) &#xA;OR Contains(Uppercase([Group PPN]),&quot;TEST&quot;)&#xA;THEN &quot;Test&quot;&#xA;&#xA;ELSE [Brand Description]&#xA;ENDIF" type="V_WString" />
+                <Field name="Costing Object" size="30" source="(Multiple Sources)" type="V_WString" />
+                <Field name="Date" source="(Multiple Sources) (BatchMacro) (BatchMacro)" type="Date" />
+                <Field name="Description" size="50" source="Formula: If [Description]=&quot;None&quot; Then [Material Description] ELSE [Description] ENDIF&#xA;" type="V_WString" />
+                <Field name="ECC_Prod_Hier" size="30" source="Formula: if IsNull([ECC_Prod_Hier]) or [ECC_Prod_Hier]=&quot;N/A&quot; or isempty([ECC_Prod_Hier]) &#xA;then &quot;None&quot; &#xA;else [ECC_Prod_Hier] &#xA;endif" type="V_String" />
+                <Field name="Group PPN" size="50" source="Formula: if IsNull([Group PPN]) or [Group PPN]=&quot;N/A&quot; or isempty([Group PPN]) &#xA;then &quot;None&quot; &#xA;else [Group PPN] &#xA;endif" type="V_WString" />
+                <Field name="Group PRB" size="50" source="Formula: if IsNull([Group PRB]) or [Group PRB]=&quot;N/A&quot; or isempty([Group PRB]) &#xA;then &quot;None&quot; &#xA;else [Group PRB]  &#xA;endif" type="V_WString" />
+                <Field name="Hierarchy Area" size="10" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Material" size="20" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Material Type" size="20" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Plant" size="60" source="Formula: if IsNull([Plant]) or [Plant]=&quot;N/A&quot; or isempty([Plant]) then &quot;None&quot; &#xA;else [Plant] &#xA;endif" type="V_WString" />
+                <Field name="PPN" size="10" source="Formula: if IsNull([PPN]) or [PPN]=&quot;N/A&quot; or isempty([PPN]) &#xA;then &quot;None&quot; &#xA;else [PPN] endif" type="V_WString" />
+                <Field name="PRB" size="10" source="Formula: if IsNull([PRB]) or [PRB]=&quot;N/A&quot; or isempty([PRB])&#xA;then &quot;None&quot; &#xA;else [PRB] &#xA;endif" type="V_WString" />
+                <Field name="Production Department" size="20" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Unit of measure" size="5" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Version" size="15" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Version_year" size="13" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Volume" source="Formula: if IsNull([Volume]) then 0&#xA;&#xA;ELSEIF [Costing Object]=&quot;HRT bulk&quot; THEN [Volume]/0.00008 &#xA;&#xA;ELSEIF [Costing Object]=&quot;HRT dispenser&quot; and DateTimeYear([Date])=2022 And [Version] IN (&quot;LE&quot;, &quot;RE2&quot;) THEN [Volume]*28&#xA;&#xA;ELSE [Volume] &#xA;&#xA;ENDIF&#xA;" type="Double" />
+                <Field name="Volume Type" size="30" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Year" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+                <Field name="Product weight" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="Double" />
+                <Field name="Costing object assembly" size="30" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field name="Costing object packed" size="30" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field name="Costing object semi-finished" size="30" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field description="Used in Volumes to product to create Costing Obejct" name="Volume Agreement Group" size="100" source="Formula: (Multiple Sources)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="136">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="367" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Costing Object" selected="True" />
+                <SelectField field="Date" selected="True" />
+                <SelectField field="Description" selected="True" />
+                <SelectField field="ECC_Prod_Hier" selected="False" />
+                <SelectField field="Group PPN" selected="False" />
+                <SelectField field="Group PRB" selected="False" />
+                <SelectField field="Hierarchy Area" selected="False" />
+                <SelectField field="Material" selected="False" />
+                <SelectField field="Material Type" selected="False" />
+                <SelectField field="Plant" selected="False" />
+                <SelectField field="PPN" selected="False" />
+                <SelectField field="PRB" selected="False" />
+                <SelectField field="Production Department" selected="True" />
+                <SelectField field="Unit of measure" selected="False" />
+                <SelectField field="Version" selected="True" />
+                <SelectField field="Version_year" selected="True" />
+                <SelectField field="Volume" selected="True" />
+                <SelectField field="Volume Type" selected="False" />
+                <SelectField field="Year" selected="False" />
+                <SelectField field="Brand Description" selected="False" />
+                <SelectField field="Product weight" selected="False" />
+                <SelectField field="Costing object assembly" selected="False" />
+                <SelectField field="Costing object packed" selected="False" />
+                <SelectField field="Costing object semi-finished" selected="False" />
+                <SelectField field="Volume Agreement Group" selected="False" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="152">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="666" y="185" width="968" height="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dual Production Departments</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1027" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Volume]*[Volume factor]" field="Volume" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Use Volume factor to define volume per Costing Object/Department</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Volume = [Volume]*[Volume factor]
+ ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1135" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                <SummarizeField field="Cost Center" action="GroupBy" rename="Cost Center" />
+                <SummarizeField field="Volume" action="Sum" rename="Total Production" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Define Volume per Cost Center (Total Production)
+]]></AnnotationText>
+              <DefaultAnnotationText>Introducing Total Production</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1243" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Version" />
+                <Field field="Cost Center" />
+                <Field field="Date" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Version" />
+                <Field field="Cost Center" />
+                <Field field="Date" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Cost Center" selected="True" input="Left_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Left_Date" selected="True" input="Left_" />
+                    <SelectField field="Left_Version" selected="True" input="Left_" />
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume" selected="True" input="Left_" />
+                    <SelectField field="Right_Date" selected="False" rename="Right_Date" input="Right_" />
+                    <SelectField field="Right_Version" selected="False" rename="Right_Version" input="Right_" />
+                    <SelectField field="Right_Version_year" selected="False" rename="Right_Version_year" input="Right_" />
+                    <SelectField field="Right_Cost Center" selected="False" rename="Right_Cost Center" input="Right_" />
+                    <SelectField field="Right_Total Production" selected="True" input="Right_" />
+                    <SelectField field="Right_Production Department" selected="False" rename="Right_Production Department" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Add Total Production  to calculate the weights per Costing object</AnnotationText>
+              <DefaultAnnotationText>Add Total Production  to calculate the weights per Costing object</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1327" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>!=</Operator>
+                <Field>Total Production</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2021-07-07 12:08:58</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>0</Operand>
+                  <StartDate>2021-07-07 12:08:58</StartDate>
+                  <EndDate>2021-07-07 12:08:58</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Total Production] != 0</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1423" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Volume]/[Total Production]" field="Costing weight" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Define Costing weight</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Costing weight = [Volume]/[Total Production]
+ ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="919" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Produced vol for Dual Prod. Departments</AnnotationText>
+              <DefaultAnnotationText>Produced vol for Departments producing dual Costing Objects</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="130">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="691" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Production Department" />
+                <Field field="Costing Object" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Production Department" />
+                <Field field="Costing Object" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Left_Date" selected="True" input="Left_" />
+                    <SelectField field="Left_Description" selected="True" input="Left_" />
+                    <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                    <SelectField field="Left_Version" selected="True" input="Left_" />
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume" selected="True" input="Left_" />
+                    <SelectField field="Right_Version_year" selected="False" rename="Right_Version_year" input="Right_" />
+                    <SelectField field="Right_Cost Center" selected="True" input="Right_" />
+                    <SelectField field="Right_Production Department" selected="False" rename="Right_Production Department" input="Right_" />
+                    <SelectField field="Right_Costing Object" selected="False" rename="Right_Costing Object" input="Right_" />
+                    <SelectField field="Right_Volume factor" selected="True" input="Right_" />
+                    <SelectField field="Right_Costing Weight" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>JOIN on Production Department
+Assign Cost Center "NULL"</AnnotationText>
+              <DefaultAnnotationText>JOIN on Production Department
+Assign Cost Center "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1519" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression><![CDATA[!IsNull([Costing weight]) AND
+ [Costing weight] != 0  ]]></Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Remove Zero Costing weight</AnnotationText>
+              <DefaultAnnotationText><![CDATA[!IsNull([Costing weight]) AND
+ [Costing weight] != 0  ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1135" y="234" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Cost Center" action="GroupBy" rename="Cost Center" />
+                <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                <SummarizeField field="Volume" action="Sum" rename="Volume" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Define Volume per Costing Object</AnnotationText>
+              <DefaultAnnotationText>Define Volume per Costing Object</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="811" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Production Department" />
+                <Field field="Costing Object" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Alternative Department" />
+                <Field field="Costing Object" />
+                <Field field="Version_year" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Alternative Department" selected="False" input="Right_" />
+                    <SelectField field="Right_Cost Center" selected="True" input="Right_" />
+                    <SelectField field="Left_Costing Object" selected="True" input="Left_" />
+                    <SelectField field="Right_Costing Object" selected="False" rename="Right_Costing Object" input="Right_" />
+                    <SelectField field="Right_Costing Weight" selected="True" input="Right_" />
+                    <SelectField field="Left_Date" selected="True" input="Left_" />
+                    <SelectField field="Left_Description" selected="True" input="Left_" />
+                    <SelectField field="Left_Production Department" selected="True" input="Left_" />
+                    <SelectField field="Right_Production Department" selected="False" rename="Right_Production Department" input="Right_" />
+                    <SelectField field="Left_Version" selected="True" input="Left_" />
+                    <SelectField field="Left_Version_year" selected="True" input="Left_" />
+                    <SelectField field="Left_Volume" selected="True" input="Left_" />
+                    <SelectField field="Right_Volume factor" selected="True" input="Right_" />
+                    <SelectField field="Right_Version_year" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Join on Alternative Department (If Prod. department not the same)
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Join on Alternative Department (If Prod. department not the same)]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="548" width="745" height="250" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Cost centers &amp; Departments with Dual Products</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="681" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">%User.InputDataPath%\DualCostCenters.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DualCostCenters.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Cost Center" size="255" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field name="Production Department" size="255" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field name="Dual Products" size="255" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+                <Field name="Volume Factor" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="Double" />
+                <Field name="Default Weight" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="Double" />
+                <Field name="Alternative Department" size="255" source="https://novonordisk.sharepoint.com/sites/UnitCostModelAppProd" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="164" y="682" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!IsNull([Production Department])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>List of Production Departments</AnnotationText>
+              <DefaultAnnotationText>!IsNull([Production Department])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="345" y="682" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Cost Center" selected="True" />
+                <SelectField field="Production Department" selected="True" />
+                <SelectField field="Dual products" selected="True" rename="Costing Object" />
+                <SelectField field="Volume factor" selected="True" />
+                <SelectField field="Default weight" selected="True" rename="Costing Weight" />
+                <SelectField field="Alternative Department" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>&gt;Costing Object
+&gt;Costing Weight</AnnotationText>
+              <DefaultAnnotationText>&gt;Costing Object
+&gt;Costing Weight</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="150">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="259" y="690" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Cost Center" />
+                <Field field="Dual products" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Dual Cost Centers</AnnotationText>
+              <DefaultAnnotationText>Dual Cost Centers</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="208">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="428" y="597" width="346" height="157" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Making it possible to run more than one version</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="207">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+                <Position x="537" y="670" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <CartesianMode>Allow</CartesianMode>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Output">
+                      <OrderChanged value="False" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Target_Version_year" selected="True" input="Target_" />
+                        <SelectField field="Source_Cost Center" selected="True" input="Source_" />
+                        <SelectField field="Source_Production Department" selected="True" input="Source_" />
+                        <SelectField field="Source_Costing Object" selected="True" input="Source_" />
+                        <SelectField field="Source_Volume factor" selected="True" input="Source_" />
+                        <SelectField field="Source_Costing Weight" selected="True" input="Source_" />
+                        <SelectField field="Source_Alternative Department" selected="True" input="Source_" />
+                        <SelectField field="*Unknown" selected="False" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+            </Node>
+            <Node ToolID="202">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="453" y="646" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3737" y="54" width="528" height="745" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Validations</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="3762" y="582" width="435" height="192" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Check if version_year, version or year are empty or not matching</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="98">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="3787" y="643" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Date" action="Min" rename="Min_Date" />
+                    <SummarizeField field="Date" action="Max" rename="Max_Date" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="99">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="4003" y="631" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>0=0</Filter>
+                  <Type>Error</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Version_year, version or year is empty for one or version_year and year are not matching. This is not allowed as it will create duplicate data in the following flows. " + ToString([Year]) + ", "+ [Version_year] + ", "+ [Version]</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+            <Node ToolID="100">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="3883" y="643" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>(
+IsNull([Version])
+or 
+IsNull([Version_year])
+or 
+IsNull([Version_year])
+or 
+Right([Version_year], 2) != Right(ToString([Year], 0),2)
+or 
+DateTimeYear([Min_Date])!=DateTimeYear([Max_Date])
+) 
+and 
+!Contains([Version_year],'_TEMP')</Expression>
+                  <Mode>Custom</Mode>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>version_year and year are not matching</AnnotationText>
+                  <DefaultAnnotationText>(
+IsNull([Version])
+or 
+IsNull([Version_year])
+or 
+IsNull([Version_year])
+or 
+Ri...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="155">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="3763" y="357" width="470" height="192" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption><![CDATA[Volume data is lost - how to check if these are all out of scope? ]]></Caption>
+              <Style TextColor="#314c4a" FillColor="#ff0000" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="151">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="3788" y="418" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Production Department" action="GroupBy" rename="Production Department" />
+                    <SummarizeField field="Costing Object" action="GroupBy" rename="Costing Object" />
+                    <SummarizeField field="Description" action="GroupBy" rename="Description" />
+                    <SummarizeField field="Volume" action="Sum" rename="Sum_Volume" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Out of scope</AnnotationText>
+                  <DefaultAnnotationText>Out of scope</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="210">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="4040" y="406" width="168" height="84" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text><![CDATA[Look more into this error warning... ]]></Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+            <Node ToolID="211">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="3884" y="418" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>=</Operator>
+                    <Field>Costing Object</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2023-01-17 21:31:54</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>No costing object</Operand>
+                      <StartDate>2023-01-17 21:31:54</StartDate>
+                      <EndDate>2023-01-17 21:31:54</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Costing Object] = "No costing object"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="156">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="3763" y="103" width="477" height="248" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption><![CDATA[Check if costs were not lost after rebalancing between Dual Cost centers ]]></Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="26">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="3788" y="152" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="Volume type" action="GroupBy" rename="Volume type" />
+                    <SummarizeField field="Cost Base" action="Sum" rename="Before_Cost Base" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="27">
+              <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+                <Position x="3788" y="224" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <SummarizeFields>
+                    <SummarizeField field="Year" action="GroupBy" rename="Year" />
+                    <SummarizeField field="Version" action="GroupBy" rename="Version" />
+                    <SummarizeField field="Version_year" action="GroupBy" rename="Version_year" />
+                    <SummarizeField field="Volume type" action="GroupBy" rename="Volume type" />
+                    <SummarizeField field="Cost Base" action="Sum" rename="After_Cost Base" />
+                  </SummarizeFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+            </Node>
+            <Node ToolID="28">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+                <Position x="3860" y="189" />
+              </GuiSettings>
+              <Properties>
+                <Configuration joinByRecordPos="False">
+                  <JoinInfo connection="Left">
+                    <Field field="Volume type" />
+                    <Field field="Version" />
+                    <Field field="Version_year" />
+                    <Field field="Year" />
+                  </JoinInfo>
+                  <JoinInfo connection="Right">
+                    <Field field="Volume type" />
+                    <Field field="Version" />
+                    <Field field="Version_year" />
+                    <Field field="Year" />
+                  </JoinInfo>
+                  <SelectConfiguration>
+                    <Configuration outputConnection="Join">
+                      <OrderChanged value="False" />
+                      <CommaDecimal value="False" />
+                      <SelectFields>
+                        <SelectField field="Right_Year" selected="True" rename="Right_Year" input="Right_" />
+                        <SelectField field="Right_Version" selected="True" rename="Right_Version" input="Right_" />
+                        <SelectField field="Right_Version_year" selected="True" rename="Right_Version_year" input="Right_" />
+                        <SelectField field="Right_Volume type" selected="True" rename="Right_Volume type" input="Right_" />
+                        <SelectField field="*Unknown" selected="True" />
+                      </SelectFields>
+                    </Configuration>
+                  </SelectConfiguration>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+            </Node>
+            <Node ToolID="29">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="3932" y="190" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="[After_Cost Base]-[Before_Cost Base]" field="diff" size="19.2" type="FixedDecimal" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[diff = [After_Cost Base]-[Before_Cost Base]
+ ]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="30">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+                <Position x="4052" y="190" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <When>Filter</When>
+                  <Filter>[diff]!=0</Filter>
+                  <Type>Error</Type>
+                  <Priority>High</Priority>
+                  <Transient>False</Transient>
+                  <MessageExpression>"Difference of " + tostring([diff]) + " encountered after dual cost centers allocation"</MessageExpression>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="109">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3235" y="199" width="446" height="518" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Change log</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff80c0" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="3260" y="248" width="396" height="444" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>KOHV: 2022-01-21: REA implemented in flow</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="3" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="264" Connection="True" />
+      <Destination ToolID="266" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="168" Connection="Right" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="168" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="171" Connection="Output" />
+      <Destination ToolID="168" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="170" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="16" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="16" Connection="Left" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Join" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="16" Connection="Right" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="169" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="205" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Join" />
+      <Destination ToolID="205" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="True" />
+      <Destination ToolID="133" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Right" />
+      <Destination ToolID="133" Connection="Left" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="205" Connection="Join" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="True" />
+      <Destination ToolID="136" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="130" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="207" Connection="Output" />
+      <Destination ToolID="130" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="264" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="130" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="131" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Left" />
+      <Destination ToolID="131" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Right" />
+      <Destination ToolID="131" Connection="Right" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="131" Connection="Left" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Right" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="True" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="207" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="207" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Unique" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="True" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="211" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="28" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Join" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>InputDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\Alteryx input data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>ProcessedDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\PUC Processed data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>009. Cost Dual Cost Centers Allocation (PS excl. API)</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="92c471a8-fab8-48c7-9bd1-0c87445d6b5b" />
+      <Telemetry>
+        <PreviousWorkflowId value="ea176179-7dcb-4410-ae37-02477b517e3a" />
+        <OriginWorkflowId value="c593d2bf-262d-4784-9b72-6569551afef9" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

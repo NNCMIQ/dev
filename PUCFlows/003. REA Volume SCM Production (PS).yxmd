@@ -1,0 +1,1771 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="90" y="54" width="444" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Flow 003: REA Volume SCM Production (PS)</Text>
+          <Font name="Apis For Office" size="14.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="90" y="102" width="456" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Author: PSFinance BI ( OKRT, CMIQ & KOHV)
+Release Date: 2021-01-01
+Short Description of Flow:
+This flow takes Volume from Supply Chain SCM table and filters only REA numbers.
+
+Version Execution File.....
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="870" y="54" width="360" height="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Change log
+24.07.2023 - CMIQ - Added Manual fix to move 1978 to 1976
+17.07.2023 - CMIQ - Removed Manual fix to move 1978 to 1976
+2023-09-01 - OAHT Created template
+2023-09-29 - CMIQ - Removed the version filter, because we always process previous and current year for REA data. 
+2023-10-23 - OAHT Changed the Date filters to extract current and previous year. If we are in january, then it will extract prev. 2 years. 
+
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="622" y="54" width="24" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor r="254" g="251" b="146" />
+          <FillColor r="252" g="255" b="136" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="622" y="90" width="24" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor r="254" g="251" b="146" />
+          <FillColor r="128" g="255" b="252" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="158">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="622" y="126" width="24" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor r="254" g="251" b="146" />
+          <FillColor name="Gray" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="159">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="622" y="162" width="24" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor r="254" g="251" b="146" />
+          <FillColor r="255" g="128" b="192" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="586" y="126" width="24" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor r="254" g="251" b="146" />
+          <FillColor name="Teal" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="161">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="678" y="54" width="180" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Input/Output Modules
+
+
+Adding Master Data
+
+
+Data Cleansing / Filtering
+
+
+Data Transformation / Logic</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="230">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="810" y="1062" width="552" height="143" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>New  Hampshire release logic
+
+Scope: N8-GP API &amp; N8 &amp; Somapacitan api 
+
+Reason: disregard the 4212 release in SCM_FACT_PRODUCTION data and instead take the release on Plant 2040 from a Global LIMS data source (ada.dsi.DSA_GLOBALLIMSSAP_BATCH). 
+
+Details: The batches should be released from HI (plant 2040) and not New Hampshire (plant 4212) before they can be used for production.
+SCM_FACT_PRODUCTION should be kept at transaction level without specific business logics
+
+Owner of logic: JMAG (comments added by OKRT)</Text>
+          <Font name="Arial Rounded MT Bold" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="232">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="473" y="809" width="310" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Global Batch  (Source: GLOBAL LIMS SAP)</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="191">
+          <GuiSettings Plugin="LockInGui.LockInInput.LockInInput">
+            <Position x="498" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Connection>PSRP Prod</Connection>
+              <Query>Select ada.dsi.DSA_GLOBALLIMSSAP_BATCH.* From ada.dsi.DSA_GLOBALLIMSSAP_BATCH</Query>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>GLOBALLIMSSAP_BATCH</AnnotationText>
+              <DefaultAnnotationText>Source=PSRP Prod
+ Table=Select ada.dsi.DSA_GLOBALLIMSSAP_BATCH.* From ada.dsi.DSA_GLOBALLIMSSAP_BATCH</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInInput" />
+        </Node>
+        <Node ToolID="192">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="606" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Custom</Mode>
+              <Expression><![CDATA["RES_ID" IN ('3097074', '3097075', '3100101')
+
+AND
+
+
+"PLANT_ID" = '2040'
+
+/* N8-GP, N8, SOmapacitan API released from Hillerød plant*/
+]]></Expression>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[ SCOPE:
+site Hillerød
+N8-GP API 
+N8 
+Somapacitan api]]></AnnotationText>
+              <DefaultAnnotationText>"RES_ID" IN ('3097074', '3097075', '3100101')
+
+AND
+
+
+"PLANT_I...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="231">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="809" y="797" width="529" height="255" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filter Hillerød Batched to replace Hampshire / Remove Null</Caption>
+          <Style TextColor="#314c4a" FillColor="#808080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="189">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="1254" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="Batch" />
+                <Field field="Plant" />
+                <Field field="Material" />
+                <Field field="Transaction_Status_Code" />
+              </GroupFields>
+              <HeaderField field="Release status" />
+              <DataField field="Status date" />
+              <Methods>
+                <Method method="First" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Batch" size="254" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="Plant" size="254" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="Material" size="254" source="CrossTab:Group:First:" type="V_WString" />
+                <Field name="Transaction_Status_Code" size="3" source="CrossTab:Group:First:" type="V_String" />
+                <Field name="RELS" source="In-DB:DB=PSRP Prod;" type="DateTime" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="Batch" order="Asc" />
+                <Field field="Plant" order="Asc" />
+                <Field field="Material" order="Asc" />
+                <Field field="Transaction_Status_Code" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="190">
+          <GuiSettings Plugin="LockInGui.LockInStreamOut.LockInStreamOut">
+            <Position x="1194" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Sort value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamOut" />
+        </Node>
+        <Node ToolID="193">
+          <GuiSettings Plugin="LockInGui.LockInFormula.LockInFormula">
+            <Position x="834" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ValidateBeforeRun value="True" />
+              <FormulaFields>
+                <FormulaField field="Release status" type="DateTime" expression="CASE &#xA;WHEN &quot;BATCH_TR_TO_CD&quot;='D' THEN 'DISP'&#xA;WHEN &quot;BATCH_TR_TO_CD&quot;='R' THEN 'REJT'&#xA;WHEN &quot;BATCH_TR_TO_CD&quot; IN ('A','L') THEN 'RELS'&#xA;ELSE 'None'&#xA; END&#xA;&#xA;/* The scope of BRD logic for released batches: status D, R, A, L. &#xA;&#xA;However, it seems that only status A + L are released batches, and the scope of this analysis*/" />
+                <FormulaField field="Batch" type="V_WString" expression="TRIM([Batch_NME])" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>&gt; define Release status 
+&gt; trim Batch number</AnnotationText>
+              <DefaultAnnotationText>Release status=CASE 
+WHEN "BATCH_TR_TO_CD"='D' THEN 'DISP'
+WH...
+Batch=TRIM([Batch_NME])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFormula" />
+        </Node>
+        <Node ToolID="194">
+          <GuiSettings Plugin="LockInGui.LockInSummarize.LockInSummarize">
+            <Position x="1026" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Batch" action="GroupBy" rename="Batch" />
+                <SummarizeField field="PLANT_ID" action="GroupBy" rename="Plant" />
+                <SummarizeField field="BATCH_TR_DT" action="GroupBy" rename="Status date" />
+                <SummarizeField field="Release status" action="GroupBy" rename="Release status" />
+                <SummarizeField field="RES_ID" action="GroupBy" rename="Material" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Select &amp; rename necessary variables</AnnotationText>
+              <DefaultAnnotationText>Select &amp; rename necessary variables</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSummarize" />
+        </Node>
+        <Node ToolID="195">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="930" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Custom</Mode>
+              <Expression><![CDATA[ "Release status"!='None' 
+AND
+"Release status"='RELS'
+
+AND
+
+"BATCH_TR_DT" IS NOT NULL
+AND
+"BATCH_TR_DT" >= DATEADD(month,-14,GETDATE())
+
+
+
+/* Filter on all released batches, then we zoom in on "RELS" (batch status A and L)
+focus the past 14 month history and remove data with "Null" release date
+
+we can add it all to the same filter and remove formula defining release status*/
+
+
+]]></Expression>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Choose released batches only
+Ignore Null in RELS (release status)
+Keep only 14month of history</AnnotationText>
+              <DefaultAnnotationText><![CDATA[ "Release status"!='None' 
+AND
+"Release status"='RELS'
+
+AND
+
+...]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+        <Node ToolID="196">
+          <GuiSettings Plugin="LockInGui.LockInFormula.LockInFormula">
+            <Position x="1122" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ValidateBeforeRun value="True" />
+              <FormulaFields>
+                <FormulaField field="Transaction_Status_Code" type="V_String" expression="'REL'" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>'REL'  for released
+&gt;used in join with SCM_Fact_Prod data</AnnotationText>
+              <DefaultAnnotationText>Transaction_Status_Code='REL'</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1577" y="281" width="347" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data filtering / Datetime</Caption>
+          <Style TextColor="#314c4a" FillColor="#008080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="188">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1602" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeYear([Date])" field="Year" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Year = DateTimeYear([Date])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="208">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1698" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Hierarchy area" selected="True" size="10" />
+                <SelectField field="PRB" selected="True" size="10" />
+                <SelectField field="PPN" selected="True" size="10" />
+                <SelectField field="Plant" selected="True" size="19" />
+                <SelectField field="Material" selected="True" />
+                <SelectField field="ECC_Prod_Hier" selected="True" size="30" />
+                <SelectField field="Version" selected="True" />
+                <SelectField field="Volume Type" selected="True" size="30" />
+                <SelectField field="Date" selected="True" type="Date" size="10" />
+                <SelectField field="Production Department" selected="True" />
+                <SelectField field="Cost Center" selected="True" size="10" />
+                <SelectField field="Volume" selected="True" />
+                <SelectField field="Year" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Review Sizes</AnnotationText>
+              <DefaultAnnotationText>Review Sizes</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="209">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1794" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if Contains([Cost Center], &quot;31-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+                <FormulaField expression="if Contains([Cost Center], &quot;69-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+                <FormulaField expression="if Contains([Cost Center], &quot;73-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+                <FormulaField expression="if Contains([Cost Center], &quot;57-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+                <FormulaField expression="if Contains([Cost Center], &quot;74-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+                <FormulaField expression="if Contains([Cost Center], &quot;58-&quot;) then &#xA;'0' + [Cost Center] else&#xA;[Cost Center]&#xA;Endif" field="Cost Center" size="10" type="String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Cost Center Clean up</AnnotationText>
+              <DefaultAnnotationText>Cost Center = if Contains([Cost Center], "31-") then 
+'0' + [Cost Center] else
+[...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="223">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1385" y="580" width="589" height="284" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Union and Join Hillerød Batches (Replace New Hamp batches)</Caption>
+          <Style TextColor="#314c4a" FillColor="#008080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="227">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1410" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Batch_Batch" />
+                <Field field="TransStat_Transaction_Status_Code" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Batch" />
+                <Field field="Transaction_Status_Code" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Batch" selected="False" input="Right_" />
+                    <SelectField field="Right_Plant" selected="False" input="Right_" />
+                    <SelectField field="Right_Material" selected="False" input="Right_" />
+                    <SelectField field="Right_Transaction_Status_Code" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Hillerød (2040) released batches</AnnotationText>
+              <DefaultAnnotationText>HI released batches</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="226">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1518" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Unite release batches from 2040 with produced batches from 4212</AnnotationText>
+              <DefaultAnnotationText>Unite release batches from 2040 with produced batches from 4212</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="224">
+          <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
+            <Position x="1614" y="690" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Connection>PSRP Prod</Connection>
+              <CreateMode>TempTable</CreateMode>
+              <Table />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Source=PSRP Prod
+Temporary Table</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamIn" />
+        </Node>
+        <Node ToolID="225">
+          <GuiSettings Plugin="LockInGui.LockInFormula.LockInFormula">
+            <Position x="1710" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ValidateBeforeRun value="True" />
+              <FormulaFields>
+                <FormulaField field="Date_REPORTING_DATE" type="DateTime" expression="CASE&#xA;WHEN &quot;RELS&quot; is null &#xA;THEN &quot;Date_REPORTING_DATE&quot;&#xA;ELSE &quot;RELS&quot; &#xA;END" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>refresh reporting date
+&gt; use 2040 release date for batches in scope</AnnotationText>
+              <DefaultAnnotationText>Date_REPORTING_DATE=CASE
+WHEN "RELS" is null 
+THEN "Date_REPO...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFormula" />
+        </Node>
+        <Node ToolID="229">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1793" y="629" width="156" height="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Date Filter</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="228">
+              <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+                <Position x="1818" y="678" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Mode>Custom</Mode>
+                  <Expression>(
+MONTH(GETDATE())!='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD(yy, DATEDIFF(yy, 0, GETDATE())-1, 0) 
+AND 
+"Date_REPORTING_DATE" &lt; DATEADD(yy, DATEDIFF(yy, 0, GETDATE())+1, 0)
+)
+
+ 
+
+OR
+
+ 
+
+(
+MONTH(GETDATE())='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD(yy, DATEDIFF(yy, 0, GETDATE())-2, 0) 
+AND
+"Date_REPORTING_DATE" &lt; DATEADD(yy, DATEDIFF(yy, 0, GETDATE()), 0)
+)
+ 
+/* Filter current and previous year, to avoid running all the data. Two years are needed due to calculating running annual total.*/</Expression>
+                  <ValidateBeforeRun value="True" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText>Filter last year and this year
+IF in January then extract prev.2  years</AnnotationText>
+                  <DefaultAnnotationText>(
+MONTH(GETDATE())!='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="207">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1961" y="281" width="166" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SC REA Volume</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="210">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1986" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">%User.InputDataPath%\SCM_FACT_Production_ModifiedPUC.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+                <WriteCompatibleVersion>False</WriteCompatibleVersion>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>SCM_FACT_Production_ModifiedPUC.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="809" y="545" width="416" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>REA_Replace New Hampshire Releases with Hillerød Releases</Caption>
+          <Style TextColor="#314c4a" FillColor="#008080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="197">
+          <GuiSettings Plugin="LockInGui.LockInStreamOut.LockInStreamOut">
+            <Position x="834" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Sort value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamOut" />
+        </Node>
+        <Node ToolID="198">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="906" y="666" width="100" height="60" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Check formula, it seems that we need to add to filter only batch status L &amp; A ("RELS")</Text>
+              <Font name="Arial" size="6.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="213">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1038" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Production_Plant] = "4212" and		[TransStat_Transaction_Status_Code] = 'REL'</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[>Ignore New Hampshire (4212) Released batches
+>use only produced batches from 4212
+ ]]></AnnotationText>
+              <DefaultAnnotationText>[Production_Plant] = "4212" and		[TransStat_Transaction_Status_Code] = 'REL'</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="164">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="593" y="377" width="191" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filter on New Hamp</Caption>
+          <Style TextColor="#314c4a" FillColor="#008080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="172">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="618" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Custom</Mode>
+              <Expression>"product_Material" NOT in ( '3097074','3097075', '3100101')
+
+/*We do not use material #3097075 for our unit cost calculations. However, itsis a part of New Haphshire releases logic (should be replaced with Hillerød release dates).threfore, changed (nov 2022) in order to be aligned with BRD*/</Expression>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>New Hampshire Releases</AnnotationText>
+              <DefaultAnnotationText>"product_Material" NOT in ( '3097074','3097075', '3100101')
+
+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="163">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="809" y="203" width="721" height="303" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>REA_Simplify Supply Chain Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#808080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="182">
+          <GuiSettings Plugin="LockInGui.LockInStreamOut.LockInStreamOut">
+            <Position x="1446" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Sort value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamOut" />
+        </Node>
+        <Node ToolID="186">
+          <GuiSettings Plugin="LockInGui.LockInSummarize.LockInSummarize">
+            <Position x="1350" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Org_CVP_VP_ID" action="GroupBy" rename="Hierarchy area" />
+                <SummarizeField field="product_PRB" action="GroupBy" rename="PRB" />
+                <SummarizeField field="product_PPN" action="GroupBy" rename="PPN" />
+                <SummarizeField field="Production_Plant" action="GroupBy" rename="Plant" />
+                <SummarizeField field="product_Material" action="GroupBy" rename="Material" />
+                <SummarizeField field="product_ECC_PH_String" action="GroupBy" rename="ECC_Prod_Hier" />
+                <SummarizeField field="Version_Code" action="GroupBy" rename="Version" />
+                <SummarizeField field="TransStat_Transaction_Release_Status" action="GroupBy" rename="Volume Type" />
+                <SummarizeField field="Date_REPORTING_DATE" action="GroupBy" rename="Date" />
+                <SummarizeField field="Production Department" action="GroupBy" rename="Production Department" />
+                <SummarizeField field="Cost_Center" action="GroupBy" rename="Cost Center" />
+                <SummarizeField field="Fact_Measure_Value" action="Sum" rename="Volume" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Renaming &amp; picking up variables</AnnotationText>
+              <DefaultAnnotationText>Renaming of many variables</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSummarize" />
+        </Node>
+        <Node ToolID="187">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="1254" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Custom</Mode>
+              <Expression><![CDATA["Version_Code" = 'REA'
+AND
+"Fact_Measure_Value" !=0
+
+AND
+"process_Main_Process" NOT IN ('Sterilisation', 'Bulkpack', '-1', 'Recovery', 'Freeze Drying')
+]]></Expression>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>&gt;choose REA
+&gt; Filter on main processes</AnnotationText>
+              <DefaultAnnotationText>"Version_Code" = 'REA'
+AND
+"Fact_Measure_Value" !=0
+
+AND
+"pro...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+        <Node ToolID="184">
+          <GuiSettings Plugin="LockInGui.LockInFormula.LockInFormula">
+            <Position x="1158" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ValidateBeforeRun value="True" />
+              <FormulaFields>
+                <FormulaField field="Version_Code" type="V_WString" expression="CASE&#xA;WHEN &quot;Version_Code&quot;='ACT' &#xA;THEN 'REA'&#xA;ELSE &quot;Version_Code&quot; &#xA;END&#xA;&#xA;" />
+                <FormulaField field="TransStat_Transaction_Release_Status" type="V_WString" expression="CASE &#xA;WHEN &quot;TransStat_Transaction_Status_Code&quot;='QUA' &#xA;THEN 'Produced' &#xA;ELSE &quot;TransStat_Transaction_Release_Status&quot; &#xA;END" />
+                <FormulaField field="Production Department" type="Double" expression="CASE&#xA;WHEN&#xA; &quot;Org_Department_ID&quot; = '-1' &#xA;AND&#xA;&quot;Cost_Center&quot; IS NOT NULL&#xA;THEN&#xA;&quot;Cost_Center&quot;&#xA;ELSE&#xA;&quot;Org_Department_ID&quot;&#xA;END" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[>assign REA
+>define Produced vs. Released
+>define Production Department
+]]></AnnotationText>
+              <DefaultAnnotationText>Version_Code=CASE
+WHEN "Version_Code"='ACT' 
+THEN 'REA'
+ELSE ...
+TransStat_Transaction_Release_Status=CASE 
+WHEN "TransStat_Tr...
+Production Department=CASE
+WHEN
+ "Org_Department_ID" = '-1' 
+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFormula" />
+        </Node>
+        <Node ToolID="185">
+          <GuiSettings Plugin="LockInGui.LockInFormula.LockInFormula">
+            <Position x="1062" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ValidateBeforeRun value="True" />
+              <FormulaFields>
+                <FormulaField field="Date_REPORTING_DATE" type="DateTime" expression="Dateadd (month,datediff(month, 0, convert(varchar,&quot;Date_REPORTING_DATE&quot;,23)),0)&#xA;&#xA;/*In order to reduce amount of rows when we do in-db summarize*/" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>First day of month</AnnotationText>
+              <DefaultAnnotationText>Date_REPORTING_DATE=Dateadd (month,datediff(month, 0, convert...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFormula" />
+        </Node>
+        <Node ToolID="183">
+          <GuiSettings Plugin="LockInGui.LockInUnion.LockInUnion">
+            <Position x="966" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>ByName</Mode>
+              <FieldMode>All</FieldMode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>union with  'N8-GP API' and  'Somapacitan' data</AnnotationText>
+              <DefaultAnnotationText>union with  'N8-GP API' and  'Somapacitan' data</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInUnion" />
+        </Node>
+        <Node ToolID="239">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="870" y="329" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Custom</Mode>
+              <Expression>(
+MONTH(GETDATE())!='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD(yy, DATEDIFF(yy, 0, GETDATE())-1, 0) 
+AND 
+"Date_REPORTING_DATE" &lt; DATEADD(yy, DATEDIFF(yy, 0, GETDATE())+1, 0)
+)
+
+ 
+
+OR
+
+ 
+
+(
+MONTH(GETDATE())='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD(yy, DATEDIFF(yy, 0, GETDATE())-2, 0) 
+AND
+"Date_REPORTING_DATE" &lt; DATEADD(yy, DATEDIFF(yy, 0, GETDATE()), 0)
+
+ 
+
+)
+
+/* Filter current and previous year, to avoid running all the data. Two years are needed due to calculating running annual total.*/</Expression>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Filter last year and this year
+IF in January then extract prev.2  years</AnnotationText>
+              <DefaultAnnotationText>(
+MONTH(GETDATE())!='1' 
+AND
+"Date_REPORTING_DATE" &gt;= DATEADD...</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+        <Node ToolID="240">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="834" y="389" width="112" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[We need to have 2 years, due to calculating running annual total. ]]></Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="167">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="341" width="252" height="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Supply Chain Volumes</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="168">
+          <GuiSettings Plugin="LockInGui.LockInInput.LockInInput">
+            <Position x="79" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Connection>PSRP Prod</Connection>
+              <Query>select ada.dso.SCM_Fact_Production.* 
+from ada.dso.SCM_Fact_Production</Query>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Source=PSRP Prod
+Query=select ada.dso.SCM_Fact_Prod...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInInput" />
+        </Node>
+        <Node ToolID="170">
+          <GuiSettings Plugin="LockInGui.LockInBrowse.LockInBrowse">
+            <Position x="176" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CurrentTempFile>C:\Users\okrt\AppData\Local\Temp\Engine_23140_e506533bd5994851adee06c9b620f75b_\Engine_26844_ae286060afe243c5b7bd63c09676173f_._AlteryxInDBBrowseCache_f6ba1c0b34431b2a5d1a71d39b6a1372.yxdb</CurrentTempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+              <FirstNRecords>1000</FirstNRecords>
+              <UseCache value="True" />
+              <DataFromCache>False</DataFromCache>
+              <CacheKey>f6ba1c0b34431b2a5d1a71d39b6a1372</CacheKey>
+              <TempFile>C:\Users\okrt\AppData\Local\Temp\Engine_26844_._AlteryxInDBBrowseCache_f6ba1c0b34431b2a5d1a71d39b6a1372.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>First 1000 records
+Caching enabled</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInBrowse" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="319" y="377" width="262" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filter on ACT values</Caption>
+          <Style TextColor="#314c4a" FillColor="#808080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="176">
+          <GuiSettings Plugin="LockInGui.LockInSelect.LockInSelect">
+            <Position x="344" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Version_Code" selected="True" />
+                <SelectField field="TransStat_Transaction_Status_Code" selected="True" />
+                <SelectField field="TransStat_Transaction_Release_Status" selected="True" />
+                <SelectField field="product_PRB" selected="True" />
+                <SelectField field="product_PPN" selected="True" />
+                <SelectField field="product_Material" selected="True" />
+                <SelectField field="product_ECC_PH_String" selected="True" />
+                <SelectField field="process_Main_Process" selected="True" />
+                <SelectField field="Org_Department_ID" selected="True" />
+                <SelectField field="Org_CVP_VP_ID" selected="True" />
+                <SelectField field="Fact_Measure_Value" selected="True" />
+                <SelectField field="Date_REPORTING_DATE" selected="True" />
+                <SelectField field="Batch_Batch" selected="True" />
+                <SelectField field="Production_Plant" selected="True" />
+                <SelectField field="Cost_Center" selected="True" />
+                <SelectField field="ADA_Load_Time" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>deselect variables not in use</AnnotationText>
+              <DefaultAnnotationText>deselect variables not in use</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSelect" />
+        </Node>
+        <Node ToolID="177">
+          <GuiSettings Plugin="LockInGui.LockInFilter.LockInFilter">
+            <Position x="452" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Field>Version_Code</Field>
+                <Operator>=</Operator>
+                <Operands>
+                  <Operand>ACT</Operand>
+                </Operands>
+              </Simple>
+              <ValidateBeforeRun value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>"Version_Code" = 'ACT'</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="179">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1590" y="234" width="173" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption><![CDATA[Version filtering. ]]></Caption>
+          <Style TextColor="#314c4a" FillColor="#008080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="199">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1614" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Version Execution List.xlsx
+Query=`Versions to Execute$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Year" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="Double" />
+                <Field name="Version" size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+                <Field name="Version_year" size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+                <Field name="Volume System" size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+                <Field name="Start Load Date" size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+                <Field name="End Load Date" size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+                <Field name="Run Today " size="255" source="File: \\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Version Execution List.xlsx|||`Versions to Execute$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="200">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1818" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Version]='REA' and [Run Today ]='Y'</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Version]='REA' and [Run Today ]='Y'</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="201">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1686" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Year" selected="True" type="Int32" size="4" />
+                <SelectField field="Version" selected="True" size="15" />
+                <SelectField field="Version_year" selected="True" size="13" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="202">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1746" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ToString([Year], 0)" field="Year_char" size="4" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Year_char = ToString([Year], 0)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="203">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1914" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Year" action="Min" rename="Year" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="204">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1986" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Year]-1" field="Year" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Year = [Year]-1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="205">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2082" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="211">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="2142" y="425" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_Version" selected="True" rename="Source_Version" input="Source_" />
+                    <SelectField field="Source_Year" selected="True" rename="Source_Year" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="212">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="2010" y="282" width="240" height="72" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Removed the version filter, because we always process previous and current year for REA data. 
+Verified with CMIQ 
+Date: 29-09-2023</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="191" Connection="Output" />
+      <Destination ToolID="192" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="True" />
+      <Destination ToolID="193" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="189" Connection="Output" />
+      <Destination ToolID="227" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="Output" />
+      <Destination ToolID="227" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="190" Connection="Output" />
+      <Destination ToolID="189" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="193" Connection="Output" />
+      <Destination ToolID="195" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="194" Connection="Output" />
+      <Destination ToolID="196" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="195" Connection="True" />
+      <Destination ToolID="194" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="196" Connection="Output" />
+      <Destination ToolID="190" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="Output" />
+      <Destination ToolID="208" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="208" Connection="Output" />
+      <Destination ToolID="209" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="209" Connection="Output" />
+      <Destination ToolID="210" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="227" Connection="Join" />
+      <Destination ToolID="226" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="213" Connection="False" />
+      <Destination ToolID="226" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="226" Connection="Output" />
+      <Destination ToolID="224" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="224" Connection="Output" />
+      <Destination ToolID="225" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="225" Connection="Output" />
+      <Destination ToolID="228" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="228" Connection="True" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="239" Connection="True" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="Output" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="False" />
+      <Destination ToolID="197" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="True" />
+      <Destination ToolID="239" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="182" Connection="Output" />
+      <Destination ToolID="188" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="True" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="Output" />
+      <Destination ToolID="184" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="183" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="168" Connection="Output" />
+      <Destination ToolID="170" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="168" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="True" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="Output" />
+      <Destination ToolID="201" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="True" />
+      <Destination ToolID="203" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="200" Connection="True" />
+      <Destination ToolID="205" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="204" Connection="Output" />
+      <Destination ToolID="205" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="Output" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="203" Connection="Output" />
+      <Destination ToolID="204" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="205" Connection="Output" />
+      <Destination ToolID="211" Connection="Targets" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>ProcessedDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\PUC Processed data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>InputDataPath</Name>
+        <Value>\\amznfsxr0ugknxs.corp.novocorp.net\FilesForADA\2_DSO\Finance\PUC 3.0\Data\Alteryx input data</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>003. REA Volume SCM Production (PS)</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="466b5c7a-e1f1-4c53-b6ab-68ce24e00026" />
+      <Telemetry>
+        <PreviousWorkflowId value="cfa21c92-eee0-4e58-b971-991c786873e1" />
+        <OriginWorkflowId value="827b94e1-e8ce-438a-90e7-7a3b6d953875" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
