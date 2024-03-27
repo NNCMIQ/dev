@@ -1,9 +1,9 @@
-# Synapse Analytics notebook source
+# Fabric notebook source
 
 # METADATA ********************
 
 # META {
-# META   "synapse": {
+# META   "dependencies": {
 # META     "lakehouse": {
 # META       "default_lakehouse": "f1b082c4-7874-4e1e-a299-4b0e85b794cd",
 # META       "default_lakehouse_name": "CMIQ_Playhouse",
